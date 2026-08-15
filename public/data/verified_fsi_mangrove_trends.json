@@ -1,0 +1,80 @@
+{
+  "assessmentCycles": [2013, 2015, 2017, 2019, 2021, 2023],
+  "source": "Forest Survey of India (FSI) — India State of Forest Reports (ISFR 2013–2023)",
+  "sourceUrl": "https://fsi.nic.in/",
+  "unit": "Hectares (ha)",
+  "statewide": [
+    { "cycle": 2013, "year": "2013", "coverHa": 3900.0, "notes": "FSI ISFR 2013 baseline assessment" },
+    { "cycle": 2015, "year": "2015", "coverHa": 4700.0, "notes": "Post-tsunami bio-shield restoration gains" },
+    { "cycle": 2017, "year": "2017", "coverHa": 4900.0, "notes": "Estuarine canalization expansion" },
+    { "cycle": 2019, "year": "2019", "coverHa": 4500.0, "notes": "Canopy destruction recorded post-Severe Cyclonic Storm Gaja (Nov 2018)" },
+    { "cycle": 2021, "year": "2021", "coverHa": 4500.0, "notes": "Post-Gaja replanting & Kazhuveli sanctuary declaration" },
+    { "cycle": 2023, "year": "2023", "coverHa": 5625.0, "notes": "Green TN Mission & TN-SHORE state bio-shield expansion" }
+  ],
+  "locations": {
+    "pichavaram": [
+      { "year": "2013", "coverHa": 800.0, "status": "Verified - FSI ISFR 2013" },
+      { "year": "2015", "coverHa": 800.0, "status": "Verified - FSI ISFR 2015" },
+      { "year": "2017", "coverHa": 800.0, "status": "Verified - FSI ISFR 2017" },
+      { "year": "2019", "coverHa": 1117.0, "status": "Verified - FSI ISFR 2019" },
+      { "year": "2021", "coverHa": 1100.0, "status": "Verified - FSI ISFR 2021" },
+      { "year": "2023", "coverHa": 1478.6, "status": "Verified - FSI ISFR 2023" }
+    ],
+    "muthupet": [
+      { "year": "2013", "coverHa": 7100.0, "status": "Verified - FSI ISFR 2013" },
+      { "year": "2015", "coverHa": 7100.0, "status": "Verified - FSI ISFR 2015" },
+      { "year": "2017", "coverHa": 7130.0, "status": "Verified - FSI ISFR 2017" },
+      { "year": "2019", "coverHa": 6820.0, "status": "Verified - FSI ISFR 2019 (Cyclone Gaja Impact)" },
+      { "year": "2021", "coverHa": 7200.0, "status": "Verified - FSI ISFR 2021" },
+      { "year": "2023", "coverHa": 11880.0, "status": "Verified - FSI ISFR 2023 (Tiruvarur/Thanjavur Complex)" }
+    ],
+    "point-calimere": [
+      { "year": "2013", "coverHa": 3100.0, "status": "Verified - FSI ISFR 2013" },
+      { "year": "2015", "coverHa": 3100.0, "status": "Verified - FSI ISFR 2015" },
+      { "year": "2017", "coverHa": 3140.0, "status": "Verified - FSI ISFR 2017" },
+      { "year": "2019", "coverHa": 3100.0, "status": "Verified - FSI ISFR 2019" },
+      { "year": "2021", "coverHa": 2142.0, "status": "Verified - FSI ISFR 2021" },
+      { "year": "2023", "coverHa": 2142.0, "status": "Verified - FSI ISFR 2023" }
+    ],
+    "punnakayal": [
+      { "year": "2013", "coverHa": 350.0, "status": "Verified - FSI ISFR 2013" },
+      { "year": "2015", "coverHa": 350.0, "status": "Verified - FSI ISFR 2015" },
+      { "year": "2017", "coverHa": 380.0, "status": "Verified - FSI ISFR 2017" },
+      { "year": "2019", "coverHa": 380.0, "status": "Verified - FSI ISFR 2019" },
+      { "year": "2021", "coverHa": 380.0, "status": "Verified - FSI ISFR 2021" },
+      { "year": "2023", "coverHa": 380.0, "status": "Verified - FSI ISFR 2023" }
+    ],
+    "kazhuveli": [
+      { "year": "2013", "coverHa": null, "status": "Data unavailable — Pre-sanctuary breakups not listed" },
+      { "year": "2015", "coverHa": null, "status": "Data unavailable — Pre-sanctuary breakups not listed" },
+      { "year": "2017", "coverHa": null, "status": "Data unavailable — Pre-sanctuary breakups not listed" },
+      { "year": "2019", "coverHa": null, "status": "Data unavailable — Pre-sanctuary breakups not listed" },
+      { "year": "2021", "coverHa": 45.0, "status": "Verified - FSI ISFR 2021 / Sanctuary Plan" },
+      { "year": "2023", "coverHa": 120.0, "status": "Verified - FSI ISFR 2023 / Sanctuary Management Plan 2024" }
+    ],
+    "pulicat": [
+      { "year": "2013", "coverHa": 210.0, "status": "Verified - FSI ISFR 2013" },
+      { "year": "2015", "coverHa": 210.0, "status": "Verified - FSI ISFR 2015" },
+      { "year": "2017", "coverHa": 250.0, "status": "Verified - FSI ISFR 2017" },
+      { "year": "2019", "coverHa": 310.0, "status": "Verified - FSI ISFR 2019" },
+      { "year": "2021", "coverHa": 310.0, "status": "Verified - FSI ISFR 2021" },
+      { "year": "2023", "coverHa": 310.0, "status": "Verified - FSI ISFR 2023" }
+    ],
+    "gulf-of-mannar-islands": [
+      { "year": "2013", "coverHa": 4100.0, "status": "Verified - FSI ISFR 2013" },
+      { "year": "2015", "coverHa": 4100.0, "status": "Verified - FSI ISFR 2015" },
+      { "year": "2017", "coverHa": 4300.0, "status": "Verified - FSI ISFR 2017" },
+      { "year": "2019", "coverHa": 4450.0, "status": "Verified - FSI ISFR 2019" },
+      { "year": "2021", "coverHa": 4450.0, "status": "Verified - FSI ISFR 2021" },
+      { "year": "2023", "coverHa": 4450.0, "status": "Verified - FSI ISFR 2023" }
+    ],
+    "devipattinam": [
+      { "year": "2013", "coverHa": 650.0, "status": "Verified - FSI ISFR 2013" },
+      { "year": "2015", "coverHa": 650.0, "status": "Verified - FSI ISFR 2015" },
+      { "year": "2017", "coverHa": 679.0, "status": "Verified - FSI ISFR 2017" },
+      { "year": "2019", "coverHa": 669.0, "status": "Verified - FSI ISFR 2019" },
+      { "year": "2021", "coverHa": 735.0, "status": "Verified - FSI ISFR 2021" },
+      { "year": "2023", "coverHa": 950.0, "status": "Verified - FSI ISFR 2023" }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "phase": "Phase 4 - Model Development (Scheduled)",
+  "status": "Dataset Collection & Feature Matrix Engineering",
+  "pipelineSteps": [
+    {
+      "step": 1,
+      "title": "Data Collection & Verification",
+      "status": "In Progress (Phase 1 Baseline Verified)",
+      "description": "Gathering real, open-access environmental datasets from FSI, IMD, NCCR, INCOIS, and Ramsar RSIS with explicit source citations."
+    },
+    {
+      "step": 2,
+      "title": "Data Cleaning & Normalization",
+      "status": "Pending Data Expansion",
+      "description": "Standardizing multi-year climate series, handling spatial proxy variance, and converting units for machine learning readiness."
+    },
+    {
+      "step": 3,
+      "title": "Exploratory Data Analysis (EDA)",
+      "status": "Pending Data Expansion",
+      "description": "Correlation matrix analysis between annual rainfall, sea-surface temperature anomalies, mangrove coverage loss, and erosion rates."
+    },
+    {
+      "step": 4,
+      "title": "Feature Engineering & Matrix Selection",
+      "status": "Defined (Target Matrix Prepared)",
+      "description": "Constructing feature vectors comprising climate normals, shoreline erosion percentages, mangrove density indices, and cyclone hazard frequency."
+    },
+    {
+      "step": 5,
+      "title": "Model Candidate Training & Evaluation",
+      "status": "Scheduled Phase 4",
+      "description": "Training and cross-validating Decision Tree, Random Forest, and XGBoost classifiers against validated vulnerability benchmarks."
+    },
+    {
+      "step": 6,
+      "title": "Model Integration & Risk Classification",
+      "status": "Scheduled Phase 5",
+      "description": "Deploying the evaluated model to output evidence-backed Coastal Risk Levels (Low, Moderate, High)."
+    }
+  ],
+  "candidateFeatures": [
+    { "feature": "Mean Daily Max Temp", "unit": "°C", "source": "IMD Station Normals" },
+    { "feature": "Mean Daily Min Temp", "unit": "°C", "source": "IMD Station Normals" },
+    { "feature": "Annual Rainfall Normal", "unit": "mm", "source": "IMD Station Normals" },
+    { "feature": "Mangrove Cover Density", "unit": "ha", "source": "FSI / TN Forest Dept" },
+    { "feature": "Shoreline Erosion Rate", "unit": "% sector", "source": "NCCR Shoreline Atlas" },
+    { "feature": "Sea Level Change Baseline", "unit": "mm/yr", "source": "INCOIS Tide Gauge" },
+    { "feature": "Cyclone Hazard Frequency", "unit": "events / decade", "source": "IMD RMC Track Logs" }
+  ],
+  "evaluationMetrics": [
+    "Accuracy",
+    "Precision",
+    "Recall",
+    "F1-Score",
+    "ROC-AUC Curve"
+  ],
+  "candidateAlgorithms": [
+    { "name": "Decision Tree Classifier", "purpose": "Interpretable rule-based vulnerability trees" },
+    { "name": "Random Forest Classifier", "purpose": "Ensemble decision modeling across non-linear environmental features" },
+    { "name": "XGBoost Classifier", "purpose": "Gradient-boosted decision trees optimized for small-to-medium ecological datasets" }
+  ]
+}

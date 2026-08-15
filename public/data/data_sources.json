@@ -1,0 +1,82 @@
+[
+  {
+    "id": "rsis-ramsar",
+    "organization": "Ramsar Information Service (RSIS)",
+    "dataset": "Ramsar Information Sheets (RIS) for India Wetlands",
+    "parameter": "Coordinates, Wetland Area, Ecosystem Classification, Ramsar Designation",
+    "year": "2002-2022",
+    "geographicLevel": "Site Boundary",
+    "status": "Verified - Site",
+    "sourceUrl": "https://rsis.ramsar.org/"
+  },
+  {
+    "id": "fsi-isfr",
+    "organization": "Forest Survey of India (FSI)",
+    "dataset": "India State of Forest Report (ISFR 2013-2023 Cycles)",
+    "parameter": "Mangrove Cover Area & Multi-Year Forest Canopy Gain vs Loss (ha)",
+    "year": "2013-2023",
+    "geographicLevel": "District & State Level",
+    "status": "Verified - District Proxy",
+    "sourceUrl": "https://fsi.nic.in/"
+  },
+  {
+    "id": "tn-forest-dept",
+    "organization": "Tamil Nadu Forest Department",
+    "dataset": "Blue Carbon Assessment Report of Tamil Nadu Mangroves",
+    "parameter": "Mangrove Forest Coverage, Restoration Area",
+    "year": "2024",
+    "geographicLevel": "District Level",
+    "status": "Verified - District Proxy",
+    "sourceUrl": "https://www.forests.tn.gov.in/"
+  },
+  {
+    "id": "imd-climate-normals",
+    "organization": "India Meteorological Department (IMD)",
+    "dataset": "IMD Climatological Tables & Station Climate Normals 1991-2020",
+    "parameter": "Mean Daily Max/Min Temperature Ranges, Annual & Monthly Rainfall Normals",
+    "year": "1991-2020",
+    "geographicLevel": "Meteorological Station",
+    "status": "Verified - Station Proxy",
+    "sourceUrl": "https://imdpune.gov.in/"
+  },
+  {
+    "id": "imd-mausam",
+    "organization": "India Meteorological Department (IMD) Mausam Portal",
+    "dataset": "IMD Regional Weather & Cyclone Track History Reports",
+    "parameter": "Cyclonic Storm Tracks (Thane, Gaja, Nivar, Michaung)",
+    "year": "2011-2023",
+    "geographicLevel": "Regional Coastal Zone",
+    "status": "Verified - Regional Proxy",
+    "sourceUrl": "https://mausam.imd.gov.in/"
+  },
+  {
+    "id": "nccr-shoreline-atlas",
+    "organization": "National Centre for Coastal Research (NCCR)",
+    "dataset": "Shoreline Change Atlas of India 2022 / Coastal Dynamics Studies",
+    "parameter": "Shoreline Erosion, Accretion & Coastal Stability Status",
+    "year": "2022",
+    "geographicLevel": "Regional Coastal Stretch",
+    "status": "Verified - Regional Proxy",
+    "sourceUrl": "https://www.nccr.gov.in/"
+  },
+  {
+    "id": "incois-cvi",
+    "organization": "INCOIS",
+    "dataset": "INCOIS Coastal Vulnerability Index (CVI) Atlas & Tide Gauge Records",
+    "parameter": "Coastal Vulnerability Index Class, Sea Level Trend",
+    "year": "2021",
+    "geographicLevel": "Regional Coastal Zone",
+    "status": "Verified - Regional Proxy",
+    "sourceUrl": "https://incois.gov.in/"
+  },
+  {
+    "id": "sdmri-seagrass",
+    "organization": "Suganthi Devadason Marine Research Institute (SDMRI)",
+    "dataset": "Seagrass Mapping of Gulf of Mannar & Palk Bay",
+    "parameter": "Seagrass Meadow Coverage & Health Metrics",
+    "year": "2022",
+    "geographicLevel": "Regional Coastal Zone",
+    "status": "Verified - Regional Proxy",
+    "sourceUrl": "http://gulfofmannar.org/"
+  }
+]

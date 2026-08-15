@@ -1,0 +1,234 @@
+[
+  {
+    "id": "pichavaram",
+    "name": "Pichavaram Mangroves",
+    "district": "Cuddalore",
+    "region": "Vellar-Coleroon Estuarine Delta",
+    "lat": 11.4381,
+    "lng": 79.7864,
+    "ecosystemType": "Estuarine Mangrove Forest",
+    "ecosystemCategory": "Estuarine Mangroves",
+    "protectionStatus": "Ramsar Site No. 2482 (Designated 8 April 2022)",
+    "areaHectares": 1478.60,
+    "dominantSpecies": "Rhizophora mucronata, Avicennia marina",
+    "seaLevelRiseRate": "1.28 mm/yr (INCOIS Tide Gauge Baseline)",
+    "degradationDrivers": [
+      "Upstream damming on Vellar & Coleroon rivers reducing freshwater flushing",
+      "Siltation chokes in narrow tidal creeks preventing seawater circulation",
+      "Plastic pollution accumulation from intense boat tourism"
+    ],
+    "restorationInitiatives": [
+      "TN-SHORE Mission (Tamil Nadu Coastal Restoration Mission 2023–2028)",
+      "MSSRF Fishbone Canalization Design (30° feeder canals restoring tidal flow)",
+      "Green Tamil Nadu Mission student sapling nurseries",
+      "Cuddalore Mangrove Conservation Centre establishment"
+    ],
+    "description": "Pichavaram Mangrove is one of India's largest estuarine mangrove systems, situated between the Vellar and Coleroon River estuaries. It features an intricate network of 4,400 small waterways, mudflats, and islets.",
+    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80",
+    "verifiedDataCount": 13,
+    "dataAvailabilityStatus": "Verified Baseline Complete"
+  },
+  {
+    "id": "muthupet",
+    "name": "Muthupet Mangroves",
+    "district": "Tiruvarur / Thanjavur",
+    "region": "Cauvery River Delta & Palk Strait",
+    "lat": 10.4000,
+    "lng": 79.5167,
+    "ecosystemType": "Lagoon Mangrove Wetland",
+    "ecosystemCategory": "Lagoon Mangroves",
+    "protectionStatus": "Part of Point Calimere Ramsar Complex (Site No. 1210)",
+    "areaHectares": 11880.00,
+    "dominantSpecies": "Avicennia marina, Excoecaria agallocha",
+    "seaLevelRiseRate": "1.15 mm/yr (Palk Strait Baseline)",
+    "degradationDrivers": [
+      "Hyper-salinity during dry summer months due to reduced Cauvery fresh water",
+      "Massive canopy damage during Severe Cyclonic Storm Gaja (Nov 2018)",
+      "Lagoon bed shallow siltation restricting mangrove propagule dispersal"
+    ],
+    "restorationInitiatives": [
+      "MISHTI Scheme (Mangrove Initiative for Shoreline Habitats & Tangible Incomes)",
+      "MSSRF Community-based Village Mangrove Councils (VMCs)",
+      "Fishbone channel desiltation drives",
+      "CAMPA fund mangrove afforestation"
+    ],
+    "description": "Muthupet Mangrove Wetland forms the southern portion of the Cauvery river delta on the Palk Strait. It is characterized by extensive shallow tidal lagoons dominated by salt-tolerant Avicennia marina mangroves.",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+    "verifiedDataCount": 12,
+    "dataAvailabilityStatus": "Verified Baseline Complete"
+  },
+  {
+    "id": "point-calimere",
+    "name": "Point Calimere / Kodiyakkarai",
+    "district": "Nagapattinam",
+    "region": "Coromandel Coastal Apex",
+    "lat": 10.3015,
+    "lng": 79.8660,
+    "ecosystemType": "Coastal Mangrove & Salt Marsh Wetland",
+    "ecosystemCategory": "Mangrove Wetlands",
+    "protectionStatus": "Ramsar Site No. 1210 (Designated 19 August 2002)",
+    "areaHectares": 38500.00,
+    "dominantSpecies": "Avicennia marina, Aegiceras corniculatum",
+    "seaLevelRiseRate": "1.20 mm/yr (Nagapattinam Baseline)",
+    "degradationDrivers": [
+      "Invasion of Prosopis juliflora (Seemai Karuvelam) choking mangrove mudflats",
+      "Historical salt pan expansion altering coastal lagoon hydrology",
+      "Feral cattle overgrazing on young Avicennia saplings"
+    ],
+    "restorationInitiatives": [
+      "Ramsar Management Plan for Site #1210",
+      "Prosopis juliflora invasive weed eradication drives",
+      "Tamil Nadu Forest Department Eco-Restoration Project",
+      "Migratory Bird Habitat & Bio-Shield Protection"
+    ],
+    "description": "Point Calimere Wildlife and Bird Sanctuary is a high-biodiversity coastal wetland complex comprising mangrove fringes, salt marshes, intertidal mudflats, and dry evergreen forest buffers.",
+    "imageUrl": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1000&q=80",
+    "verifiedDataCount": 11,
+    "dataAvailabilityStatus": "Verified Baseline Complete"
+  },
+  {
+    "id": "punnakayal",
+    "name": "Punnakayal Mangroves",
+    "district": "Thoothukudi",
+    "region": "Tamiraparani River Estuary",
+    "lat": 8.6385,
+    "lng": 78.1215,
+    "ecosystemType": "Estuarine Mangrove Forest",
+    "ecosystemCategory": "Estuarine Mangroves",
+    "protectionStatus": "Forest Dept Fishbone Restoration Zone / Green TN Mission",
+    "areaHectares": 380.00,
+    "dominantSpecies": "Avicennia marina, Rhizophora mucronata",
+    "seaLevelRiseRate": "1.30 mm/yr (Thoothukudi Port Tide Gauge)",
+    "degradationDrivers": [
+      "Severe soil hypersalinity choking estuarine mudflats during low freshwater runoff",
+      "Encroachment from coastal salt pan operations",
+      "Industrial effluent discharge pressures near Thoothukudi port limits"
+    ],
+    "restorationInitiatives": [
+      "TN-SHORE & NABARD Funded Fishbone Canalization",
+      "Green Tamil Nadu Mission coastal bio-shield planting",
+      "Re-introduction of Rhizophora mucronata in low-salinity estuarine pockets",
+      "Prosopis weed removal across river mouth"
+    ],
+    "description": "Punnakayal mangrove forest is situated at the Thamirabarani river estuary. It undergoes active restoration using fishbone canalization techniques to enhance tidal flushing and coastal bio-shield protection.",
+    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80",
+    "verifiedDataCount": 11,
+    "dataAvailabilityStatus": "Verified Baseline Complete"
+  },
+  {
+    "id": "kazhuveli",
+    "name": "Kazhuveli Wetland Sanctuary",
+    "district": "Villupuram",
+    "region": "Coromandel Coastal Lagoon",
+    "lat": 12.0833,
+    "lng": 79.8667,
+    "ecosystemType": "Brackish Lagoon & Mangrove Sanctuary",
+    "ecosystemCategory": "Lagoon Mangroves",
+    "protectionStatus": "Ramsar Site No. 3026 / TN 16th Bird Sanctuary (2021)",
+    "areaHectares": 5151.60,
+    "dominantSpecies": "Avicennia marina, Ceriops decandra",
+    "seaLevelRiseRate": "1.25 mm/yr (Coromandel Lagoon Baseline)",
+    "degradationDrivers": [
+      "Agricultural pesticide runoff from surrounding agrarian catchments",
+      "Coastal sand mining along Uppukalli creek entrance",
+      "Historical mangrove wood harvesting prior to sanctuary notification"
+    ],
+    "restorationInitiatives": [
+      "TN 16th Bird Sanctuary Protection Declaration (2021)",
+      "Designation as Ramsar Site No. 3026 (2024)",
+      "Mangrove bio-shield restoration along Edayanthittu estuary",
+      "Central Asian Flyway migratory bird conservation"
+    ],
+    "description": "Kazhuveli is the second-largest brackish water lagoon in Peninsular India, connected to the Bay of Bengal via Uppukalli creek. It features mangrove restoration patches protecting against tidal swash.",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+    "verifiedDataCount": 10,
+    "dataAvailabilityStatus": "Verified Baseline Complete"
+  },
+  {
+    "id": "pulicat",
+    "name": "Pulicat / Pazhaverkadu Mangroves",
+    "district": "Tiruvallur",
+    "region": "Northern Tamil Nadu Lagoon",
+    "lat": 13.4167,
+    "lng": 80.3167,
+    "ecosystemType": "Coastal Lagoon & Estuarine Mangrove Fringe",
+    "ecosystemCategory": "Estuarine Mangroves",
+    "protectionStatus": "Pulicat Lake Bird Sanctuary / CRZ-I",
+    "areaHectares": 18400.00,
+    "dominantSpecies": "Avicennia marina, Rhizophora spp.",
+    "seaLevelRiseRate": "1.32 mm/yr (Chennai Port Tide Gauge)",
+    "degradationDrivers": [
+      "Siltation of lagoon mouth mouth reducing seawater exchange",
+      "Thermal power plant fly ash and industrial effluent discharge",
+      "Erosion of outer barrier island dunes exposing mangroves to high wave energy"
+    ],
+    "restorationInitiatives": [
+      "MISHTI Scheme Mangrove Afforestation",
+      "Pulicat Bird Sanctuary Habitat Management Plan",
+      "Barrier island dune stabilization & mangrove bio-shield expansion",
+      "Community fishing welfare & eco-tourism regulation"
+    ],
+    "description": "Pulicat Lagoon is India's second largest brackish lagoon system, featuring estuarine mangrove fringes and barrier islands providing essential nursery grounds for estuarine prawns and mullet.",
+    "imageUrl": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1000&q=80",
+    "verifiedDataCount": 10,
+    "dataAvailabilityStatus": "Verified Baseline Complete"
+  },
+  {
+    "id": "gulf-of-mannar-islands",
+    "name": "Ramanathapuram Island Mangroves",
+    "district": "Ramanathapuram",
+    "region": "Gulf of Mannar Biosphere Reserve",
+    "lat": 9.2885,
+    "lng": 79.3129,
+    "ecosystemType": "Island Mangroves & Seagrass Meadows",
+    "ecosystemCategory": "Seagrass & Island Mangroves",
+    "protectionStatus": "UNESCO Man and Biosphere Reserve (MAB 2001)",
+    "areaHectares": 12700.00,
+    "dominantSpecies": "Pemphis acidula, Rhizophora mucronata",
+    "seaLevelRiseRate": "1.10 mm/yr (Pamban Tide Gauge)",
+    "degradationDrivers": [
+      "Destructive bottom trawling near island coral reef margins",
+      "Marine heatwaves causing seagrass die-off and mangrove heat stress",
+      "Islet shoreline scours during monsoonal storm surges"
+    ],
+    "restorationInitiatives": [
+      "UNESCO Biosphere Reserve Conservation Protocol",
+      "GoMBRT Seagrass & Island Mangrove Bio-shield Restoration",
+      "Artificial reef deployment to attenuate wave energy",
+      "Dugong & Turtle conservation sanctuary management"
+    ],
+    "description": "The Ramanathapuram island sector of Gulf of Mannar encompasses island mangrove fringes (e.g. Kurusadai Island) surrounded by extensive seagrass beds and marine bio-shield formations.",
+    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80",
+    "verifiedDataCount": 12,
+    "dataAvailabilityStatus": "Verified Baseline Complete"
+  },
+  {
+    "id": "devipattinam",
+    "name": "Devipattinam / Palk Bay Mangrove Belt",
+    "district": "Ramanathapuram / Pudukkottai",
+    "region": "Palk Bay Coastal Delta",
+    "lat": 9.4750,
+    "lng": 78.8950,
+    "ecosystemType": "Deltaic Mangrove Bio-Shield",
+    "ecosystemCategory": "Deltaic Bio-Shield Mangroves",
+    "protectionStatus": "Green Tamil Nadu Mission Coastal Bio-Shield Zone",
+    "areaHectares": 950.00,
+    "dominantSpecies": "Avicennia marina, Lumnitzera racemosa",
+    "seaLevelRiseRate": "1.18 mm/yr (Palk Bay Baseline)",
+    "degradationDrivers": [
+      "Monsoonal wave scours along unprotected Palk Bay shoreline",
+      "Historical conversion of coastal intertidal land into commercial salt pans",
+      "High evaporation rates increasing summer soil salinity"
+    ],
+    "restorationInitiatives": [
+      "TN-SHORE Mission Coastal Bio-Shield Belt Expansion",
+      "Green Tamil Nadu Mission community mangrove planting",
+      "Palk Bay Dugong Sanctuary & Mangrove Corridor Linkage",
+      "Fisherwomen SHG mangrove nursery development"
+    ],
+    "description": "Devipattinam coastal stretch along the Palk Bay comprises dense intertidal Avicennia mangrove bio-shields planted to mitigate storm surges and shoreline erosion.",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+    "verifiedDataCount": 10,
+    "dataAvailabilityStatus": "Verified Baseline Complete"
+  }
+]

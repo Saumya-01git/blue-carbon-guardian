@@ -1,0 +1,98 @@
+{
+  "pichavaram": [
+    { "year": 2015, "restored": 85, "loss": 10, "cover": 1100.0 },
+    { "year": 2016, "restored": 45, "loss": 12, "cover": 1133.0 },
+    { "year": 2017, "restored": 30, "loss": 15, "cover": 1148.0 },
+    { "year": 2018, "restored": 25, "loss": 95, "cover": 1078.0 },
+    { "year": 2019, "restored": 40, "loss": 18, "cover": 1100.0 },
+    { "year": 2020, "restored": 65, "loss": 10, "cover": 1155.0 },
+    { "year": 2021, "restored": 50, "loss": 12, "cover": 1193.0 },
+    { "year": 2022, "restored": 110, "loss": 8, "cover": 1295.0 },
+    { "year": 2023, "restored": 95, "loss": 10, "cover": 1380.0 },
+    { "year": 2024, "restored": 105, "loss": 6, "cover": 1478.6 }
+  ],
+  "muthupet": [
+    { "year": 2015, "restored": 210, "loss": 12, "cover": 10500.0 },
+    { "year": 2016, "restored": 90, "loss": 15, "cover": 10575.0 },
+    { "year": 2017, "restored": 60, "loss": 35, "cover": 10600.0 },
+    { "year": 2018, "restored": 40, "loss": 380, "cover": 10260.0 },
+    { "year": 2019, "restored": 50, "loss": 45, "cover": 10265.0 },
+    { "year": 2020, "restored": 110, "loss": 20, "cover": 10355.0 },
+    { "year": 2021, "restored": 90, "loss": 25, "cover": 10420.0 },
+    { "year": 2022, "restored": 140, "loss": 15, "cover": 10545.0 },
+    { "year": 2023, "restored": 105, "loss": 18, "cover": 10632.0 },
+    { "year": 2024, "restored": 185, "loss": 10, "cover": 11880.0 }
+  ],
+  "point-calimere": [
+    { "year": 2015, "restored": 45, "loss": 5, "cover": 1850.0 },
+    { "year": 2016, "restored": 20, "loss": 8, "cover": 1862.0 },
+    { "year": 2017, "restored": 15, "loss": 10, "cover": 1867.0 },
+    { "year": 2018, "restored": 10, "loss": 28, "cover": 1849.0 },
+    { "year": 2019, "restored": 12, "loss": 9, "cover": 1852.0 },
+    { "year": 2020, "restored": 22, "loss": 5, "cover": 1869.0 },
+    { "year": 2021, "restored": 25, "loss": 8, "cover": 1886.0 },
+    { "year": 2022, "restored": 35, "loss": 4, "cover": 1917.0 },
+    { "year": 2023, "restored": 30, "loss": 5, "cover": 1942.0 },
+    { "year": 2024, "restored": 45, "loss": 3, "cover": 2142.0 }
+  ],
+  "punnakayal": [
+    { "year": 2015, "restored": 15, "loss": 2, "cover": 220.0 },
+    { "year": 2016, "restored": 10, "loss": 3, "cover": 227.0 },
+    { "year": 2017, "restored": 8, "loss": 4, "cover": 231.0 },
+    { "year": 2018, "restored": 5, "loss": 12, "cover": 224.0 },
+    { "year": 2019, "restored": 8, "loss": 3, "cover": 229.0 },
+    { "year": 2020, "restored": 25, "loss": 2, "cover": 252.0 },
+    { "year": 2021, "restored": 30, "loss": 4, "cover": 278.0 },
+    { "year": 2022, "restored": 45, "loss": 2, "cover": 321.0 },
+    { "year": 2023, "restored": 35, "loss": 3, "cover": 353.0 },
+    { "year": 2024, "restored": 30, "loss": 1, "cover": 380.0 }
+  ],
+  "kazhuveli": [
+    { "year": 2015, "restored": 5, "loss": 1, "cover": 45.0 },
+    { "year": 2016, "restored": 4, "loss": 2, "cover": 47.0 },
+    { "year": 2017, "restored": 3, "loss": 2, "cover": 48.0 },
+    { "year": 2018, "restored": 2, "loss": 5, "cover": 45.0 },
+    { "year": 2019, "restored": 4, "loss": 1, "cover": 48.0 },
+    { "year": 2020, "restored": 6, "loss": 1, "cover": 53.0 },
+    { "year": 2021, "restored": 20, "loss": 2, "cover": 71.0 },
+    { "year": 2022, "restored": 25, "loss": 1, "cover": 95.0 },
+    { "year": 2023, "restored": 15, "loss": 2, "cover": 108.0 },
+    { "year": 2024, "restored": 14, "loss": 1, "cover": 120.0 }
+  ],
+  "pulicat": [
+    { "year": 2015, "restored": 18, "loss": 3, "cover": 210.0 },
+    { "year": 2016, "restored": 12, "loss": 4, "cover": 218.0 },
+    { "year": 2017, "restored": 8, "loss": 5, "cover": 221.0 },
+    { "year": 2018, "restored": 5, "loss": 15, "cover": 211.0 },
+    { "year": 2019, "restored": 10, "loss": 4, "cover": 217.0 },
+    { "year": 2020, "restored": 15, "loss": 3, "cover": 229.0 },
+    { "year": 2021, "restored": 20, "loss": 4, "cover": 245.0 },
+    { "year": 2022, "restored": 30, "loss": 2, "cover": 273.0 },
+    { "year": 2023, "restored": 25, "loss": 3, "cover": 295.0 },
+    { "year": 2024, "restored": 18, "loss": 2, "cover": 310.0 }
+  ],
+  "gulf-of-mannar-islands": [
+    { "year": 2015, "restored": 25, "loss": 2, "cover": 380.0 },
+    { "year": 2016, "restored": 15, "loss": 3, "cover": 392.0 },
+    { "year": 2017, "restored": 10, "loss": 4, "cover": 398.0 },
+    { "year": 2018, "restored": 8, "loss": 18, "cover": 388.0 },
+    { "year": 2019, "restored": 12, "loss": 3, "cover": 397.0 },
+    { "year": 2020, "restored": 18, "loss": 2, "cover": 413.0 },
+    { "year": 2021, "restored": 22, "loss": 3, "cover": 432.0 },
+    { "year": 2022, "restored": 30, "loss": 2, "cover": 460.0 },
+    { "year": 2023, "restored": 20, "loss": 2, "cover": 478.0 },
+    { "year": 2024, "restored": 14, "loss": 1, "cover": 490.0 }
+  ],
+  "devipattinam": [
+    { "year": 2015, "restored": 40, "loss": 5, "cover": 650.0 },
+    { "year": 2016, "restored": 25, "loss": 6, "cover": 669.0 },
+    { "year": 2017, "restored": 18, "loss": 8, "cover": 679.0 },
+    { "year": 2018, "restored": 12, "loss": 35, "cover": 656.0 },
+    { "year": 2019, "restored": 20, "loss": 7, "cover": 669.0 },
+    { "year": 2020, "restored": 35, "loss": 4, "cover": 700.0 },
+    { "year": 2021, "restored": 40, "loss": 5, "cover": 735.0 },
+    { "year": 2022, "restored": 80, "loss": 3, "cover": 812.0 },
+    { "year": 2023, "restored": 75, "loss": 4, "cover": 883.0 },
+    { "year": 2024, "restored": 70, "loss": 3, "cover": 950.0 }
+  ]
+}

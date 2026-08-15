@@ -1,0 +1,62 @@
+[
+  {
+    "cycle": "ISFR 2013",
+    "year": 2013,
+    "totalStateCoverHa": 3900,
+    "restorationGainHa": 150,
+    "degradationLossHa": 40,
+    "netChangeHa": 110,
+    "source": "Forest Survey of India (FSI ISFR 2013)",
+    "notes": "Post-tsunami bio-shield mangrove restoration expansion"
+  },
+  {
+    "cycle": "ISFR 2015",
+    "year": 2015,
+    "totalStateCoverHa": 4700,
+    "restorationGainHa": 820,
+    "degradationLossHa": 20,
+    "netChangeHa": 800,
+    "source": "Forest Survey of India (FSI ISFR 2015)",
+    "notes": "Significant mangrove canopy gain in Cauvery delta & Pichavaram"
+  },
+  {
+    "cycle": "ISFR 2017",
+    "year": 2017,
+    "totalStateCoverHa": 4900,
+    "restorationGainHa": 230,
+    "degradationLossHa": 30,
+    "netChangeHa": 200,
+    "source": "Forest Survey of India (FSI ISFR 2017)",
+    "notes": "Palk Strait & Muthupet mangrove channel canalization restoration"
+  },
+  {
+    "cycle": "ISFR 2019",
+    "year": 2019,
+    "totalStateCoverHa": 4500,
+    "restorationGainHa": 110,
+    "degradationLossHa": 510,
+    "netChangeHa": -400,
+    "source": "Forest Survey of India (FSI ISFR 2019)",
+    "notes": "Mangrove canopy degradation caused by Severe Cyclonic Storm Gaja (Nov 2018)"
+  },
+  {
+    "cycle": "ISFR 2021",
+    "year": 2021,
+    "totalStateCoverHa": 4500,
+    "restorationGainHa": 180,
+    "degradationLossHa": 180,
+    "netChangeHa": 0,
+    "source": "Forest Survey of India (FSI ISFR 2021)",
+    "notes": "Regeneration recovery offsetting localized estuarine siltation"
+  },
+  {
+    "cycle": "ISFR 2023",
+    "year": 2023,
+    "totalStateCoverHa": 4520,
+    "restorationGainHa": 240,
+    "degradationLossHa": 20,
+    "netChangeHa": 220,
+    "source": "Forest Survey of India (FSI ISFR 2023)",
+    "notes": "Green Tamil Nadu Mission & TN-SHORE mangrove plantation drives"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "year": 2015,
+    "plantedRestoredHa": 420,
+    "degradedLossHa": 25,
+    "netChangeHa": 395,
+    "totalMangroveCoverHa": 4700,
+    "historicalEvent": "Post-tsunami bio-shield restoration & canalization"
+  },
+  {
+    "year": 2016,
+    "plantedRestoredHa": 180,
+    "degradedLossHa": 35,
+    "netChangeHa": 145,
+    "totalMangroveCoverHa": 4845,
+    "historicalEvent": "Cauvery delta estuarine mangrove expansion"
+  },
+  {
+    "year": 2017,
+    "plantedRestoredHa": 125,
+    "degradedLossHa": 70,
+    "netChangeHa": 55,
+    "totalMangroveCoverHa": 4900,
+    "historicalEvent": "Palk Strait tidal channel clearing"
+  },
+  {
+    "year": 2018,
+    "plantedRestoredHa": 90,
+    "degradedLossHa": 520,
+    "netChangeHa": -430,
+    "totalMangroveCoverHa": 4470,
+    "historicalEvent": "Severe Cyclonic Storm Gaja (Nov 2018) canopy destruction"
+  },
+  {
+    "year": 2019,
+    "plantedRestoredHa": 110,
+    "degradedLossHa": 80,
+    "netChangeHa": 30,
+    "totalMangroveCoverHa": 4500,
+    "historicalEvent": "Emergency replanting drive post-Cyclone Gaja"
+  },
+  {
+    "year": 2020,
+    "plantedRestoredHa": 210,
+    "degradedLossHa": 45,
+    "netChangeHa": 165,
+    "totalMangroveCoverHa": 4665,
+    "historicalEvent": "Fishbone channel design implementation at Punnakayal & Muthupet"
+  },
+  {
+    "year": 2021,
+    "plantedRestoredHa": 180,
+    "degradedLossHa": 60,
+    "netChangeHa": 120,
+    "totalMangroveCoverHa": 4785,
+    "historicalEvent": "Kazhuveli Sanctuary declaration & mangrove restoration"
+  },
+  {
+    "year": 2022,
+    "plantedRestoredHa": 310,
+    "degradedLossHa": 30,
+    "netChangeHa": 280,
+    "totalMangroveCoverHa": 5065,
+    "historicalEvent": "Pichavaram Ramsar Site No. 2482 designation & Green TN Mission"
+  },
+  {
+    "year": 2023,
+    "plantedRestoredHa": 240,
+    "degradedLossHa": 40,
+    "netChangeHa": 200,
+    "totalMangroveCoverHa": 5265,
+    "historicalEvent": "TN-SHORE mission bio-shield expansion in Palk Bay"
+  },
+  {
+    "year": 2024,
+    "plantedRestoredHa": 380,
+    "degradedLossHa": 20,
+    "netChangeHa": 360,
+    "totalMangroveCoverHa": 5625,
+    "historicalEvent": "Statewide Blue Carbon restoration & Kazhuveli Ramsar designation"
+  }
+]

@@ -230,5 +230,121 @@
     "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
     "verifiedDataCount": 10,
     "dataAvailabilityStatus": "Verified Baseline Complete"
+  },
+  {
+    "id": "kanyakumari",
+    "name": "Kanyakumari Coastal Bio-Shield",
+    "district": "Kanyakumari",
+    "region": "Cape Comorin Coastal Apex",
+    "lat": 8.0883,
+    "lng": 77.5385,
+    "ecosystemType": "Estuarine Fringes & Salt Marsh Wetland",
+    "ecosystemCategory": "Coastal Bio-Shield",
+    "protectionStatus": "Forest Dept Bio-Shield Zone / TN Coastal Protection",
+    "areaHectares": 620.00,
+    "dominantSpecies": "Avicennia marina, Excoecaria agallocha",
+    "seaLevelRiseRate": "1.35 mm/yr (Cape Comorin Tide Gauge)",
+    "degradationDrivers": [
+      "High wave energy monsoon sea erosion along southern cape tip",
+      "Coastal infrastructure build-out and harbour expansion",
+      "Freshwater flow diversion along Manakudy estuary"
+    ],
+    "restorationInitiatives": [
+      "TN-SHORE Mission Cape Bio-Shield Wave Barrier",
+      "Manakudy Estuary Eco-Restoration Project",
+      "Green Tamil Nadu Mission Coastal Planting",
+      "Community Mangrove Protection Guards"
+    ],
+    "description": "Located at the southernmost tip of Peninsular India, the Kanyakumari coastal bio-shield and Manakudy estuarine wetlands protect against extreme Indian Ocean wave climate.",
+    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80",
+    "verifiedDataCount": 11,
+    "dataAvailabilityStatus": "Verified Baseline Complete"
+  },
+  {
+    "id": "manamelkudi",
+    "name": "Manamelkudi Mangrove Wetland",
+    "district": "Pudukkottai",
+    "region": "Palk Strait Intertidal Zone",
+    "lat": 9.9542,
+    "lng": 79.1384,
+    "ecosystemType": "Intertidal Lagoon Mangrove",
+    "ecosystemCategory": "Lagoon Mangroves",
+    "protectionStatus": "MISHTI Priority Restoration Zone",
+    "areaHectares": 890.00,
+    "dominantSpecies": "Avicennia marina, Rhizophora mucronata",
+    "seaLevelRiseRate": "1.16 mm/yr (Palk Strait Baseline)",
+    "degradationDrivers": [
+      "Hyper-salinity choking tidal inlets during summer drought",
+      "Silt accumulation from seasonal creek channels",
+      "Historical wood cutting prior to conservation initiatives"
+    ],
+    "restorationInitiatives": [
+      "MISHTI Scheme Fishbone Canalization",
+      "Palk Strait Dugong Corridor Protection",
+      "Green Tamil Nadu Mission Sapling Planting",
+      "Community Village Mangrove Councils"
+    ],
+    "description": "Manamelkudi mangrove wetland is a vital intertidal habitat along the quiet waters of the Palk Strait, forming an essential carbon sink and bio-shield.",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+    "verifiedDataCount": 10,
+    "dataAvailabilityStatus": "Verified Baseline Complete"
+  },
+  {
+    "id": "ennore",
+    "name": "Ennore Creek Mangrove Bio-Shield",
+    "district": "Chennai / Tiruvallur",
+    "region": "Kosasthalaiyar Estuary & Port Zone",
+    "lat": 13.2185,
+    "lng": 80.3188,
+    "ecosystemType": "Estuarine Bio-Shield & Industrial Wetland",
+    "ecosystemCategory": "Estuarine Bio-Shield",
+    "protectionStatus": "CRZ-I Priority Wetland / TN Eco-Restoration",
+    "areaHectares": 410.00,
+    "dominantSpecies": "Avicennia marina",
+    "seaLevelRiseRate": "1.34 mm/yr (Chennai Port Gauge)",
+    "degradationDrivers": [
+      "Fly ash slurries and industrial thermal discharge into creek channels",
+      "Dredging and port expansion altering natural tidal hydraulics",
+      "Encroachment on mudflats and flood absorption plains"
+    ],
+    "restorationInitiatives": [
+      "Kosasthalaiyar River & Ennore Creek Eco-Restoration Plan",
+      "Fly Ash Slurry Removal & Canal Dredging",
+      "TN Wetland Mission Mangrove Bio-Shield Planting",
+      "Community Waterkeeper Bio-Monitoring"
+    ],
+    "description": "Ennore Creek estuarine system serves as a crucial natural flood barrier and carbon store for northern Chennai, receiving focused eco-restoration under Tamil Nadu Wetland Mission.",
+    "imageUrl": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1000&q=80",
+    "verifiedDataCount": 11,
+    "dataAvailabilityStatus": "Verified Baseline Complete"
+  },
+  {
+    "id": "adyar",
+    "name": "Adyar Estuary & Eco-Park Wetland",
+    "district": "Chennai",
+    "region": "Adyar Estuary & Bay Fringes",
+    "lat": 13.0125,
+    "lng": 80.2642,
+    "ecosystemType": "Urban Estuarine & Brackish Lagoon",
+    "ecosystemCategory": "Urban Estuarine Mangrove",
+    "protectionStatus": "Tholkappia Poonga Eco-Park Reserved Area",
+    "areaHectares": 145.00,
+    "dominantSpecies": "Avicennia marina, Excoecaria agallocha",
+    "seaLevelRiseRate": "1.30 mm/yr (Chennai Baseline)",
+    "degradationDrivers": [
+      "Urban stormwater runoff and solid waste accumulation",
+      "Constricted estuary mouth sandbar formation restricting tidal exchange",
+      "High human density pressures in adjacent urban corridors"
+    ],
+    "restorationInitiatives": [
+      "Tholkappia Poonga (Adyar Poonga) Phase I & II Eco-Restoration",
+      "Chennai River Restoration Trust (CRRT) Estuary Desiltation",
+      "Urban Bio-Shield Mangrove Canalization",
+      "School & University Eco-Educational Tours"
+    ],
+    "description": "Adyar Estuary is an urban estuarine wetland sanctuary in heart of Chennai, transformed through landmark eco-restoration into a living mangrove carbon sink and bird habitat.",
+    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80",
+    "verifiedDataCount": 12,
+    "dataAvailabilityStatus": "Verified Baseline Complete"
   }
 ]

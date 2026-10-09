@@ -1,5 +1,5 @@
 import React from 'react';
-import { Waves, Shield, MapPin, ArrowRight, TreePine, Fish, CloudRain, Database, Cpu, CheckCircle2 } from 'lucide-react';
+import { Waves, Shield, MapPin, ArrowRight, TreePine, Fish, CloudRain, Database, Cpu, CheckCircle2, Layers, Sparkles, AlertTriangle, ShieldCheck } from 'lucide-react';
 
 export function LandingPage({ onExplore, onOpenAuth, user }) {
   return (
@@ -46,14 +46,65 @@ export function LandingPage({ onExplore, onOpenAuth, user }) {
         </div>
       </section>
 
+      {/* NEW: What is a Mangrove Ecosystem & Blue Carbon Science */}
+      <section className="space-y-6 max-w-7xl mx-auto px-4">
+        <div className="text-center space-y-2">
+          <div className="inline-flex items-center space-x-1.5 text-xs font-mono text-emerald-400 bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-800">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Ecosystem Science & Biological Architecture</span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-100">
+            What are Mangrove Forests & How Do They Store Carbon?
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-400 max-w-2xl mx-auto">
+            Mangroves are specialized, salt-tolerant trees (*halophytes*) that thrive in intertidal coastal zones where ocean tides mix with freshwater river estuaries.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Card 1: Root System & Adaptation */}
+          <div className="glass-panel p-6 rounded-2xl border border-slate-800 space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-emerald-950 text-emerald-400 flex items-center justify-center border border-emerald-800">
+              <TreePine className="w-5 h-5" />
+            </div>
+            <h3 className="text-lg font-bold text-slate-100">Specialized Root Adaptations</h3>
+            <p className="text-xs text-slate-300 leading-relaxed">
+              Mangroves utilize specialized respiratory roots like <strong className="text-emerald-400">Pneumatophores (peg roots)</strong> in <em className="text-teal-300">Avicennia marina</em> and <strong className="text-emerald-400">Stilt roots</strong> in <em className="text-teal-300">Rhizophora mucronata</em> to absorb oxygen from mudflats during low tide.
+            </p>
+          </div>
+
+          {/* Card 2: Tidal Zonation */}
+          <div className="glass-panel p-6 rounded-2xl border border-slate-800 space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-teal-950 text-teal-400 flex items-center justify-center border border-teal-800">
+              <Layers className="w-5 h-5" />
+            </div>
+            <h3 className="text-lg font-bold text-slate-100">Tidal Zonation Architecture</h3>
+            <p className="text-xs text-slate-300 leading-relaxed">
+              Tamil Nadu mangrove swamps exhibit distinct zonation: <strong className="text-teal-300">Seaward Zone</strong> (*Rhizophora* withstanding high wave energy), <strong className="text-teal-300">Mid-Lagoon Zone</strong> (*Avicennia* dominating saline mudflats), and <strong className="text-teal-300">Landward Zone</strong> (*Excoecaria agallocha*).
+            </p>
+          </div>
+
+          {/* Card 3: Blue Carbon Sequestration */}
+          <div className="glass-panel p-6 rounded-2xl border border-slate-800 space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-cyan-950 text-cyan-400 flex items-center justify-center border border-cyan-800">
+              <ShieldCheck className="w-5 h-5" />
+            </div>
+            <h3 className="text-lg font-bold text-slate-100">Blue Carbon Soil Storage</h3>
+            <p className="text-xs text-slate-300 leading-relaxed">
+              Mangrove sediment soils trap organic carbon under oxygen-depleted (anaerobic) waterlogged conditions, storing carbon <strong className="text-cyan-300">4x to 10x faster per hectare</strong> than terrestrial tropical rainforests for thousands of years.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Blue Carbon Ecosystem Highlights */}
       <section className="space-y-6 max-w-7xl mx-auto px-4">
         <div className="text-center space-y-2">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-100">
-            Understanding Blue Carbon Ecosystems
+            Tamil Nadu Blue Carbon Habitats
           </h2>
           <p className="text-xs sm:text-sm text-slate-400 max-w-xl mx-auto">
-            Coastal vegetated habitats capture and store organic carbon up to 10 times faster per hectare than terrestrial tropical rainforests.
+            Coastal vegetated habitats along the Coromandel Coast, Palk Bay, and Gulf of Mannar Biosphere.
           </p>
         </div>
 
@@ -64,7 +115,7 @@ export function LandingPage({ onExplore, onOpenAuth, user }) {
             </div>
             <h3 className="text-lg font-bold text-slate-100">Mangrove Forests</h3>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Salt-tolerant trees along intertidal zones protecting shorelines from storm surge, wave erosion, and storing organic sediment carbon.
+              Estuarine & lagoon mangrove buffers protecting Tamil Nadu shorelines from cyclonic storm surges and erosion.
             </p>
           </div>
 
@@ -74,7 +125,7 @@ export function LandingPage({ onExplore, onOpenAuth, user }) {
             </div>
             <h3 className="text-lg font-bold text-slate-100">Seagrass Meadows</h3>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Submerged marine flowering plants feeding dugongs & sea turtles while sequestering carbon into marine soil beds.
+              Submerged marine flowering plants in Palk Bay & Gulf of Mannar feeding dugongs and sea turtles while sequestering soil carbon.
             </p>
           </div>
 

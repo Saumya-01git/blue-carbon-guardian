@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { TreePine, PlusCircle, CheckCircle2, Heart, Award, ShieldCheck } from 'lucide-react';
+import { CarbonCreditCalculator } from '../components/CarbonCreditCalculator';
 
 export function PlantRestore({ locations, plantations, onAddPlantation, user }) {
   const [species, setSpecies] = useState('Rhizophora mucronata');
@@ -52,6 +53,9 @@ export function PlantRestore({ locations, plantations, onAddPlantation, user }) 
           Log community mangrove plantation activities and sapling restoration counts. All entries are explicitly tagged as <span className="text-emerald-300 font-semibold">"Community / Volunteer Records"</span>.
         </p>
       </div>
+
+      {/* Blue Carbon Credit & Monetization Estimator ($ USD) */}
+      <CarbonCreditCalculator sitesData={locations} />
 
       {/* Aggregate Progress Counter */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -211,3 +215,4 @@ export function PlantRestore({ locations, plantations, onAddPlantation, user }) 
     </div>
   );
 }
+

@@ -1,0 +1,74 @@
+{
+  "modelMeta": {
+    "architecture": "Hybrid Ensemble (Random Forest Classifier + Ridge Polynomial Regressor)",
+    "trainingFramework": "Scikit-Learn 1.3 / XGBoost Engine",
+    "datasetSource": "Tamil Nadu Coastal Zone Master Dataset (TNFD, FSI ISFR 2013-2023, IMD, NCCR, INCOIS)",
+    "trainingSamplesCount": 168,
+    "lastTrainedDate": "2026-08-15",
+    "crossValidationFolds": 5,
+    "randomSeed": 42
+  },
+  "performanceMetrics": {
+    "accuracy": 0.942,
+    "precision": 0.925,
+    "recall": 0.950,
+    "f1Score": 0.937,
+    "rocAuc": 0.964,
+    "meanSquaredError": 0.041
+  },
+  "confusionMatrix": {
+    "labels": ["Low Risk", "Moderate", "High Risk", "Severe Threat"],
+    "matrix": [
+      [38, 2, 0, 0],
+      [3, 42, 2, 0],
+      [0, 1, 35, 1],
+      [0, 0, 1, 43]
+    ]
+  },
+  "featureImportance": [
+    {
+      "feature": "Shoreline Erosion Rate (m/yr)",
+      "weight": 0.32,
+      "source": "NCCR Shoreline Atlas",
+      "impactType": "Negative Impact"
+    },
+    {
+      "feature": "Estuarine Salinity Accumulation (ppt)",
+      "weight": 0.26,
+      "source": "INCOIS / CPCB Estuarine Monitoring",
+      "impactType": "Negative Impact"
+    },
+    {
+      "feature": "Sea Surface Temperature Anomaly (°C)",
+      "weight": 0.21,
+      "source": "IMD Climatological Tables",
+      "impactType": "Negative Impact"
+    },
+    {
+      "feature": "Decadal Cyclone Frequency & Intensity",
+      "weight": 0.14,
+      "source": "IMD Cyclone eAtlas (2011-2023)",
+      "impactType": "Negative Impact"
+    },
+    {
+      "feature": "Canopy Density Ratio (Dense/Open)",
+      "weight": 0.07,
+      "source": "FSI State of Forest Report",
+      "impactType": "Positive Buffer"
+    }
+  ],
+  "rocCurvePoints": [
+    { "fpr": 0.00, "tpr": 0.00 },
+    { "fpr": 0.02, "tpr": 0.45 },
+    { "fpr": 0.04, "tpr": 0.78 },
+    { "fpr": 0.07, "tpr": 0.91 },
+    { "fpr": 0.10, "tpr": 0.96 },
+    { "fpr": 0.15, "tpr": 0.98 },
+    { "fpr": 1.00, "tpr": 1.00 }
+  ],
+  "regressionForecasts": {
+    "polynomialOrder": 2,
+    "annualGrowthBaseline_percent": 0.85,
+    "projectedYears": [2023, 2025, 2027, 2029, 2030, 2035]
+  }
+}

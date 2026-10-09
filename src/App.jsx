@@ -11,6 +11,7 @@ import { PlantRestore } from './pages/PlantRestore';
 import { DataSourcesPage } from './pages/DataSourcesPage';
 import { FutureMLPage } from './pages/FutureMLPage';
 import { GlossaryPage } from './pages/GlossaryPage';
+import { ScrollToTop } from './components/ScrollToTop';
 import { useAuthStore } from './hooks/useAuthStore';
 import { useDataStore } from './hooks/useDataStore';
 
@@ -202,6 +203,9 @@ export default function App() {
         onLogin={login}
         onRegister={register}
       />
+
+      {/* Floating Back-To-Top Button */}
+      <ScrollToTop />
     </div>
   );
 }

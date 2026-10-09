@@ -10,7 +10,7 @@ export function Navbar({ activeTab, setActiveTab, user, onOpenAuth, onLogout, th
     { id: 'plant-restore', label: 'Plant / Restore', icon: <TreePine className="w-3.5 h-3.5 mr-1 shrink-0" /> },
     { id: 'glossary', label: 'Glossary & Terms', icon: <BookOpen className="w-3.5 h-3.5 mr-1 shrink-0" /> },
     { id: 'data-sources', label: 'Data Sources', icon: <Database className="w-3.5 h-3.5 mr-1 shrink-0" /> },
-    { id: 'future-ml', label: 'Future AI Pipeline', icon: <Cpu className="w-3.5 h-3.5 mr-1 shrink-0" /> }
+    { id: 'future-ml', label: 'AI Risk & 2050 Engine (Review 3)', icon: <Cpu className="w-3.5 h-3.5 mr-1 shrink-0" /> }
   ];
 
   return (

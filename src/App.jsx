@@ -73,13 +73,23 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col font-sans transition-colors duration-200 relative overflow-x-hidden">
-      {/* SOLID HIGH-CONTRAST PRESENTATION CANVAS (Zero muddy translucency, optimized for projectors) */}
+      {/* VIBRANT HIGH-CONTRAST TAMIL NADU MANGROVE & TROPICAL COASTAL BACKGROUND */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        {/* Solid Deep Dark Canvas */}
-        <div className="absolute inset-0 bg-[#040d12] dark:bg-[#040d12] light:bg-[#f8fafc]" />
+        {/* High-Contrast Vivid Lush Mangrove Lagoon Photo — Clear, Vibrant & Visible */}
+        <div
+          className="absolute inset-0 bg-cover bg-center animate-vibrant-pan filter brightness-110 saturate-140 contrast-105 opacity-75 dark:opacity-75 light:opacity-40 transition-all duration-700"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=2000&q=80')`
+          }}
+        />
 
-        {/* Crisp Top Ambient Vignette (No noisy photos, no moving fish) */}
-        <div className="absolute top-0 left-0 right-0 h-96 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-950/20 via-transparent to-transparent dark:from-emerald-950/20 dark:via-transparent light:from-slate-200/40 light:via-transparent" />
+        {/* Tropical Sunlit Emerald Glass Overlay — Balanced for Translucency without Washing Out */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#021a15]/60 via-[#03261f]/50 to-[#01140e]/65 dark:from-[#021a15]/60 dark:via-[#03261f]/50 dark:to-[#01140e]/65 light:from-[#f0fdf4]/75 light:via-[#d1fae5]/65 light:to-[#f0fdf4]/80" />
+
+        {/* Vibrant Floating Sun Glimmer & Emerald Water Light Blobs for Depth */}
+        <div className="absolute top-10 left-1/4 w-[36rem] h-[36rem] bg-amber-400/25 dark:bg-amber-400/25 light:bg-amber-300/20 rounded-full blur-3xl animate-sun-glimmer pointer-events-none" />
+        <div className="absolute bottom-20 right-1/4 w-[40rem] h-[40rem] bg-emerald-400/30 dark:bg-emerald-400/30 light:bg-emerald-300/20 rounded-full blur-3xl animate-emerald-pulse pointer-events-none" />
+        <div className="absolute top-1/2 left-10 w-[30rem] h-[30rem] bg-cyan-400/25 dark:bg-cyan-400/25 light:bg-cyan-300/20 rounded-full blur-3xl animate-sun-glimmer pointer-events-none" />
       </div>
 
       {/* Main App Content Wrapper */}

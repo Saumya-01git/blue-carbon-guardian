@@ -5,11 +5,12 @@ export function LandingPage({ onExplore, onOpenAuth, user }) {
   return (
     <div className="space-y-16 py-8">
       {/* Hero Banner Section with Expanded Width */}
-      <section className="relative rounded-3xl overflow-hidden glass-panel border-2 border-emerald-500/50 p-8 sm:p-14 text-center bg-[#0b171e] shadow-2xl">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-950/30 via-transparent to-transparent pointer-events-none" />
+      <section className="relative rounded-3xl overflow-hidden glass-panel border border-emerald-500/40 p-8 sm:p-14 text-center shadow-2xl">
+        <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/35 via-transparent to-teal-950/25 pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-500/20 via-transparent to-transparent pointer-events-none" />
         
         <div className="relative z-10 max-w-5xl mx-auto space-y-7">
-          <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-emerald-950 border border-emerald-500/60 text-emerald-300 text-xs sm:text-sm font-bold tracking-wide uppercase">
+          <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-emerald-950/90 border border-emerald-500/50 text-emerald-300 text-xs sm:text-sm font-bold tracking-wide uppercase">
             <Shield className="w-4 h-4 text-emerald-400" />
             <span>Academic Project — Tamil Nadu, India</span>
           </div>
@@ -37,7 +38,7 @@ export function LandingPage({ onExplore, onOpenAuth, user }) {
             {!user && (
               <button
                 onClick={onOpenAuth}
-                className="w-full sm:w-auto px-7 py-4 bg-[#10212b] hover:bg-[#162d3d] text-slate-100 font-bold text-base rounded-2xl border border-slate-700 flex items-center justify-center transition-all cursor-pointer"
+                className="w-full sm:w-auto px-7 py-4 glass-panel hover:bg-emerald-950/60 text-slate-100 font-bold text-base rounded-2xl border border-slate-700/80 flex items-center justify-center transition-all cursor-pointer"
               >
                 Researcher Sign In
               </button>
@@ -63,7 +64,7 @@ export function LandingPage({ onExplore, onOpenAuth, user }) {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {/* Card 1: Root System & Adaptation */}
-          <div className="glass-panel p-7 sm:p-8 rounded-3xl border-2 border-emerald-500/40 space-y-4 flex flex-col justify-between shadow-xl">
+          <div className="glass-panel p-7 sm:p-8 rounded-3xl border border-emerald-500/30 space-y-4 flex flex-col justify-between">
             <div className="space-y-3">
               <div className="w-12 h-12 rounded-2xl bg-emerald-950 text-emerald-300 flex items-center justify-center border border-emerald-700">
                 <TreePine className="w-6 h-6" />
@@ -76,7 +77,7 @@ export function LandingPage({ onExplore, onOpenAuth, user }) {
           </div>
 
           {/* Card 2: Tidal Zonation */}
-          <div className="glass-panel p-7 sm:p-8 rounded-3xl border-2 border-teal-500/40 space-y-4 flex flex-col justify-between shadow-xl">
+          <div className="glass-panel p-7 sm:p-8 rounded-3xl border border-teal-500/30 space-y-4 flex flex-col justify-between">
             <div className="space-y-3">
               <div className="w-12 h-12 rounded-2xl bg-teal-950 text-teal-300 flex items-center justify-center border border-teal-700">
                 <Layers className="w-6 h-6" />
@@ -89,7 +90,7 @@ export function LandingPage({ onExplore, onOpenAuth, user }) {
           </div>
 
           {/* Card 3: Blue Carbon Sequestration */}
-          <div className="glass-panel p-7 sm:p-8 rounded-3xl border-2 border-cyan-500/40 space-y-4 flex flex-col justify-between shadow-xl">
+          <div className="glass-panel p-7 sm:p-8 rounded-3xl border border-cyan-500/30 space-y-4 flex flex-col justify-between">
             <div className="space-y-3">
               <div className="w-12 h-12 rounded-2xl bg-cyan-950 text-cyan-300 flex items-center justify-center border border-cyan-700">
                 <ShieldCheck className="w-6 h-6" />
@@ -115,7 +116,7 @@ export function LandingPage({ onExplore, onOpenAuth, user }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          <div className="glass-panel p-7 sm:p-8 rounded-3xl border-2 border-slate-700/80 space-y-3 shadow-xl">
+          <div className="glass-panel p-7 sm:p-8 rounded-3xl border border-slate-700 space-y-3">
             <div className="w-12 h-12 rounded-2xl bg-emerald-950 text-emerald-300 flex items-center justify-center border border-emerald-700">
               <TreePine className="w-6 h-6" />
             </div>
@@ -125,7 +126,7 @@ export function LandingPage({ onExplore, onOpenAuth, user }) {
             </p>
           </div>
 
-          <div className="glass-panel p-7 sm:p-8 rounded-3xl border-2 border-slate-700/80 space-y-3 shadow-xl">
+          <div className="glass-panel p-7 sm:p-8 rounded-3xl border border-slate-700 space-y-3">
             <div className="w-12 h-12 rounded-2xl bg-teal-950 text-teal-300 flex items-center justify-center border border-teal-700">
               <Fish className="w-6 h-6" />
             </div>
@@ -135,7 +136,7 @@ export function LandingPage({ onExplore, onOpenAuth, user }) {
             </p>
           </div>
 
-          <div className="glass-panel p-7 sm:p-8 rounded-3xl border-2 border-slate-700/80 space-y-3 shadow-xl">
+          <div className="glass-panel p-7 sm:p-8 rounded-3xl border border-slate-700 space-y-3">
             <div className="w-12 h-12 rounded-2xl bg-cyan-950 text-cyan-300 flex items-center justify-center border border-cyan-700">
               <CloudRain className="w-6 h-6" />
             </div>
@@ -148,7 +149,7 @@ export function LandingPage({ onExplore, onOpenAuth, user }) {
       </section>
 
       {/* Verified Open-Data Guarantee */}
-      <section className="glass-panel p-8 sm:p-10 rounded-3xl border-2 border-emerald-500/50 w-full flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+      <section className="glass-panel p-8 sm:p-10 rounded-3xl border border-emerald-500/40 w-full flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
         <div className="space-y-2">
           <div className="inline-flex items-center space-x-1.5 text-xs sm:text-sm font-mono text-emerald-300 font-bold">
             <CheckCircle2 className="w-5 h-5 text-emerald-400 mr-1" />

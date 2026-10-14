@@ -33,17 +33,17 @@ export function CarbonCreditCalculator({ sitesData }) {
             <span className="px-2.5 py-1 bg-emerald-950 text-emerald-200 border border-emerald-600/60 rounded-lg text-xs">Paris Agreement Article 6 Framework</span>
             <span>• Blue Carbon Monetization Engine</span>
           </div>
-          <h2 className="text-xl sm:text-2xl font-extrabold text-slate-100">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-100">
             Blue Carbon Credit & Economic Value Estimator ($ USD)
           </h2>
-          <p className="text-sm text-slate-300 mt-1">
+          <p className="text-base sm:text-lg text-slate-200 mt-2 leading-relaxed">
             Quantify carbon sequestration revenue and avoided climate damage savings for Tamil Nadu's 12 coastal mangrove sanctuaries.
           </p>
         </div>
 
         <button
           onClick={handleReset}
-          className="flex items-center space-x-2 px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 rounded-xl text-xs font-bold transition shadow-md cursor-pointer shrink-0"
+          className="flex items-center space-x-2 px-4 py-2.5 bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 rounded-xl text-xs sm:text-sm font-bold transition shadow-md cursor-pointer shrink-0"
         >
           <RefreshCw className="w-4 h-4 text-emerald-400" />
           <span>Reset Calculator</span>
@@ -51,14 +51,14 @@ export function CarbonCreditCalculator({ sitesData }) {
       </div>
 
       {/* Simple Plain-English Explanation Box for tCO2e */}
-      <div className="bg-emerald-950/40 border border-emerald-500/30 rounded-2xl p-4 text-xs sm:text-sm text-slate-200 flex items-start space-x-3">
-        <HelpCircle className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-        <div className="space-y-1">
-          <span className="font-bold text-emerald-300 block">💡 What is "tCO₂e"? (Simple Plain English Explanation)</span>
-          <p className="text-slate-300 leading-relaxed text-xs">
-            <strong className="text-emerald-200">tCO₂e</strong> stands for <strong className="text-white font-mono font-bold">Tonnes of Carbon Dioxide Equivalent</strong>.
+      <div className="bg-emerald-950/40 border border-emerald-500/30 rounded-2xl p-4 sm:p-5 text-sm sm:text-base text-slate-200 flex items-start space-x-3.5">
+        <HelpCircle className="w-6 h-6 text-emerald-400 shrink-0 mt-0.5" />
+        <div className="space-y-1.5">
+          <span className="font-extrabold text-emerald-300 text-base sm:text-lg block">💡 What is "tCO₂e"? (Simple Plain English Explanation)</span>
+          <p className="text-slate-200 leading-relaxed text-sm sm:text-base">
+            <strong className="text-emerald-300">tCO₂e</strong> stands for <strong className="text-white font-mono font-bold">Tonnes of Carbon Dioxide Equivalent</strong>.
             It is the standard international unit used to measure how much carbon dioxide gas mangroves capture and clean from the atmosphere.
-            <span className="block mt-1 text-slate-400">
+            <span className="block mt-2 text-slate-300">
               • <strong className="text-emerald-300">1 tCO₂e</strong> = 1 Metric Ton (1,000 kg) of CO₂ absorbed by mangrove trees & mud soil.
               <br />
               • <strong className="text-emerald-300">Carbon Credits</strong>: Each 1 tCO₂e saved can be sold as 1 Carbon Credit on international carbon markets (ranging from $20 to $200 USD per credit).
@@ -72,12 +72,12 @@ export function CarbonCreditCalculator({ sitesData }) {
         
         {/* Slider 1: Carbon Market Price */}
         <div className="space-y-3">
-          <div className="flex justify-between items-center text-sm sm:text-base">
+          <div className="flex justify-between items-center text-base sm:text-lg">
             <span className="font-bold text-slate-200 flex items-center">
-              <DollarSign className="w-4 h-4 text-emerald-400 mr-2" />
+              <DollarSign className="w-5 h-5 text-emerald-400 mr-2" />
               Global Carbon Market Price ($/tCO₂e)
             </span>
-            <span className="font-mono text-emerald-400 font-extrabold text-base sm:text-lg">${carbonPriceUSD} USD/ton</span>
+            <span className="font-mono text-emerald-400 font-black text-lg sm:text-xl">${carbonPriceUSD} USD/ton</span>
           </div>
           <input 
             type="range" 
@@ -86,9 +86,9 @@ export function CarbonCreditCalculator({ sitesData }) {
             step="5"
             value={carbonPriceUSD}
             onChange={(e) => setCarbonPriceUSD(parseInt(e.target.value))}
-            className="w-full h-2.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-400"
+            className="w-full h-3 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-400"
           />
-          <div className="flex justify-between text-xs text-slate-400 font-mono">
+          <div className="flex justify-between text-xs sm:text-sm text-slate-300 font-mono">
             <span>$20 (Compliance Minimum)</span>
             <span>$200 (EU ETS Premium)</span>
           </div>
@@ -96,12 +96,12 @@ export function CarbonCreditCalculator({ sitesData }) {
 
         {/* Slider 2: Afforestation Target */}
         <div className="space-y-3">
-          <div className="flex justify-between items-center text-sm sm:text-base">
+          <div className="flex justify-between items-center text-base sm:text-lg">
             <span className="font-bold text-slate-200 flex items-center">
-              <TreePine className="w-4 h-4 text-cyan-400 mr-2" />
+              <TreePine className="w-5 h-5 text-cyan-400 mr-2" />
               TN-SHORE Afforestation Target (ha)
             </span>
-            <span className="font-mono text-cyan-400 font-extrabold text-base sm:text-lg">+{reforestationHa.toLocaleString()} ha</span>
+            <span className="font-mono text-cyan-400 font-black text-lg sm:text-xl">+{reforestationHa.toLocaleString()} ha</span>
           </div>
           <input 
             type="range" 
@@ -110,9 +110,9 @@ export function CarbonCreditCalculator({ sitesData }) {
             step="100"
             value={reforestationHa}
             onChange={(e) => setReforestationHa(parseInt(e.target.value))}
-            className="w-full h-2.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+            className="w-full h-3 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
           />
-          <div className="flex justify-between text-xs text-slate-400 font-mono">
+          <div className="flex justify-between text-xs sm:text-sm text-slate-300 font-mono">
             <span>100 ha (Pilot Creek)</span>
             <span>5,000 ha (MISHTI State Horizon)</span>
           </div>
@@ -123,28 +123,28 @@ export function CarbonCreditCalculator({ sitesData }) {
       {/* Outputs Row */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 font-mono">
         
-        <div className="bg-slate-900/90 glass-panel-glow p-5 rounded-2xl border border-slate-800 space-y-2 cursor-pointer">
-          <div className="text-slate-400 text-xs font-semibold uppercase">Total Soil Carbon Stock</div>
-          <div className="text-2xl sm:text-3xl font-extrabold text-emerald-400">{totalSoilCarbonTons.toLocaleString()} tCO₂e</div>
-          <div className="text-xs text-slate-400 font-semibold">Across 12 TN Coastal Sanctuaries</div>
+        <div className="bg-slate-900/90 glass-panel-glow p-5 sm:p-6 rounded-2xl border border-slate-800 space-y-2 cursor-pointer">
+          <div className="text-slate-300 text-xs sm:text-sm font-bold uppercase">Total Soil Carbon Stock</div>
+          <div className="text-3xl sm:text-4xl font-black text-emerald-400">{totalSoilCarbonTons.toLocaleString()} tCO₂e</div>
+          <div className="text-xs sm:text-sm text-slate-300 font-semibold">Across 12 TN Coastal Sanctuaries</div>
         </div>
 
-        <div className="bg-slate-900/90 glass-panel-glow p-5 rounded-2xl border border-slate-800 space-y-2 cursor-pointer">
-          <div className="text-slate-400 text-xs font-semibold uppercase">Annual Sequestration Rate</div>
-          <div className="text-2xl sm:text-3xl font-extrabold text-cyan-400">{annualSequestrationTons.toLocaleString()} tCO₂e/yr</div>
-          <div className="text-xs text-slate-400 font-semibold">Active Net Sequestration</div>
+        <div className="bg-slate-900/90 glass-panel-glow p-5 sm:p-6 rounded-2xl border border-slate-800 space-y-2 cursor-pointer">
+          <div className="text-slate-300 text-xs sm:text-sm font-bold uppercase">Annual Sequestration Rate</div>
+          <div className="text-3xl sm:text-4xl font-black text-cyan-400">{annualSequestrationTons.toLocaleString()} tCO₂e/yr</div>
+          <div className="text-xs sm:text-sm text-slate-300 font-semibold">Active Net Sequestration</div>
         </div>
 
-        <div className="bg-slate-900/90 glass-panel-glow p-5 rounded-2xl border border-slate-800 space-y-2 cursor-pointer">
-          <div className="text-slate-400 text-xs font-semibold uppercase">Annual Carbon Credit Revenue</div>
-          <div className="text-2xl sm:text-3xl font-extrabold text-indigo-400">${(annualCreditRevenueUSD / 1000000).toFixed(2)}M USD/yr</div>
-          <div className="text-xs text-emerald-400 font-bold">At ${carbonPriceUSD}/ton Market Value</div>
+        <div className="bg-slate-900/90 glass-panel-glow p-5 sm:p-6 rounded-2xl border border-slate-800 space-y-2 cursor-pointer">
+          <div className="text-slate-300 text-xs sm:text-sm font-bold uppercase">Annual Carbon Credit Revenue</div>
+          <div className="text-3xl sm:text-4xl font-black text-indigo-400">${(annualCreditRevenueUSD / 1000000).toFixed(2)}M USD/yr</div>
+          <div className="text-xs sm:text-sm text-emerald-400 font-bold">At ${carbonPriceUSD}/ton Market Value</div>
         </div>
 
-        <div className="bg-slate-900/90 glass-panel-glow p-5 rounded-2xl border border-slate-800 space-y-2 cursor-pointer">
-          <div className="text-slate-400 text-xs font-semibold uppercase">10-Yr Afforestation Yield</div>
-          <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">${(reforestedRevenueUSD / 1000000).toFixed(2)}M USD</div>
-          <div className="text-xs text-emerald-400 font-bold">From +{reforestationHa.toLocaleString()} ha Planting Target</div>
+        <div className="bg-slate-900/90 glass-panel-glow p-5 sm:p-6 rounded-2xl border border-slate-800 space-y-2 cursor-pointer">
+          <div className="text-slate-300 text-xs sm:text-sm font-bold uppercase">10-Yr Afforestation Yield</div>
+          <div className="text-3xl sm:text-4xl font-black text-amber-400">${(reforestedRevenueUSD / 1000000).toFixed(2)}M USD</div>
+          <div className="text-xs sm:text-sm text-emerald-400 font-bold">From +{reforestationHa.toLocaleString()} ha Planting Target</div>
         </div>
 
       </div>

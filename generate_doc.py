@@ -7,7 +7,7 @@ from docx.oxml.ns import nsdecls, qn
 
 doc = docx.Document()
 
-# Page Margins
+# Page Margins (Standard 1 inch all around)
 sections = doc.sections
 for section in sections:
     section.top_margin = Inches(1)
@@ -20,12 +20,12 @@ def set_cell_background(cell, fill_hex):
     shading_elm = parse_xml(f'<w:shd {nsdecls("w")} w:fill="{fill_hex}"/>')
     cell._tc.get_or_add_tcPr().append(shading_elm)
 
-# Title
+# Title (Standard Large Title)
 title_p = doc.add_paragraph()
 title_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 title_run = title_p.add_run("ACADEMIC PROJECT SUBMISSION WRITEUP & TECHNICAL REPORT")
 title_run.font.name = 'Arial'
-title_run.font.size = Pt(20)
+title_run.font.size = Pt(22)
 title_run.font.bold = True
 title_run.font.color.rgb = RGBColor(16, 185, 129) # Emerald Green
 
@@ -34,7 +34,7 @@ sub_p = doc.add_paragraph()
 sub_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 sub_run = sub_p.add_run("Blue Carbon Guardian: AI-Driven Coastal Ecosystem Risk Assessment & 2050 Climate Forecasting System for Tamil Nadu")
 sub_run.font.name = 'Arial'
-sub_run.font.size = Pt(13)
+sub_run.font.size = Pt(14)
 sub_run.font.italic = True
 sub_run.font.color.rgb = RGBColor(100, 116, 139)
 
@@ -53,9 +53,9 @@ meta_data = [
 for i, (k, v) in enumerate(meta_data):
     r_k = meta_table.cell(i, 0).paragraphs[0].add_run(k)
     r_k.font.bold = True
-    r_k.font.size = Pt(10.5)
+    r_k.font.size = Pt(11.5)
     r_v = meta_table.cell(i, 1).paragraphs[0].add_run(v)
-    r_v.font.size = Pt(10.5)
+    r_v.font.size = Pt(11.5)
     set_cell_background(meta_table.cell(i, 0), "F1F5F9")
     set_cell_background(meta_table.cell(i, 1), "F8FAFC")
 
@@ -67,30 +67,35 @@ def add_custom_heading(text, level=1):
     run = h.add_run(text)
     run.font.name = 'Arial'
     if level == 1:
-        run.font.size = Pt(15)
+        run.font.size = Pt(16)
         run.font.bold = True
         run.font.color.rgb = RGBColor(15, 23, 42) # Slate 900
     elif level == 2:
-        run.font.size = Pt(13)
+        run.font.size = Pt(14)
         run.font.bold = True
         run.font.color.rgb = RGBColor(16, 185, 129) # Emerald
     return h
 
+# Helper for Standard Paragraphs (12pt font)
+def add_standard_paragraph(text, style=None):
+    p = doc.add_paragraph(style=style)
+    r = p.add_run(text)
+    r.font.name = 'Arial'
+    r.font.size = Pt(12)
+    return p
+
 # Section 1: Executive Summary
 add_custom_heading("1. Executive Summary & Project Objectives", level=1)
-p1 = doc.add_paragraph(
+add_standard_paragraph(
     "Mangrove forests along the Tamil Nadu coastline are premier 'Blue Carbon' ecosystems, storing up to 10 times more carbon per hectare than terrestrial tropical forests while serving as natural bio-shields against ocean storm surges and shoreline erosion. However, accelerating sea-level rise, heatwaves, hypersalinity, and coastal erosion threaten these critical habitats."
 )
-p1.style.font.size = Pt(10.5)
-
-p2 = doc.add_paragraph(
+add_standard_paragraph(
     "Blue Carbon Guardian is an advanced, full-stack AI-driven web application and decision-support system designed to monitor, analyze, and forecast coastal ecosystem vulnerability across 12 primary sanctuary sites in Tamil Nadu. The system integrates multi-source government baseline datasets (FSI, IMD, INCOIS, NCCR, TNFD) with machine learning algorithms (Decision Trees, XGBoost, Polynomial & Ridge Regression) and Copernicus Sentinel-2 10m satellite remote sensing to project mangrove health trajectories up to Year 2050 under IPCC AR6 emission scenarios."
 )
-p2.style.font.size = Pt(10.5)
 
 # Section 2: Data Provenance Table
 add_custom_heading("2. Complete Data Provenance & Dataset Specification", level=1)
-doc.add_paragraph("All baseline parameters were synthesized from official government publications, satellite telemetry, and tide gauge records:")
+add_standard_paragraph("All baseline parameters were synthesized from official government publications, satellite telemetry, and tide gauge records:")
 
 prov_headers = ["Data Variable", "Source Agency", "Temporal Range", "Unit / Format", "Purpose in Project"]
 prov_rows = [
@@ -111,8 +116,9 @@ for j, h in enumerate(prov_headers):
     cell = table.cell(0, j)
     cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
     r = cell.paragraphs[0].add_run(h)
+    r.font.name = 'Arial'
     r.font.bold = True
-    r.font.size = Pt(9.5)
+    r.font.size = Pt(11)
     r.font.color.rgb = RGBColor(255, 255, 255)
     set_cell_background(cell, "0F172A")
 
@@ -122,7 +128,8 @@ for i, row in enumerate(prov_rows):
     for j, val in enumerate(row):
         cell = table.cell(i+1, j)
         r = cell.paragraphs[0].add_run(val)
-        r.font.size = Pt(9)
+        r.font.name = 'Arial'
+        r.font.size = Pt(10.5)
         set_cell_background(cell, bg_color)
 
 doc.add_paragraph()
@@ -140,7 +147,7 @@ r1_bullets = [
     "Academic Environmental Glossary: Reference dictionary for terms like Blue Carbon, Ramsar Sites, and Fishbone Canalization."
 ]
 for b in r1_bullets:
-    doc.add_paragraph(b, style='List Bullet')
+    add_standard_paragraph(b, style='List Bullet')
 
 # Review 2
 add_custom_heading("Review 2 (Phase 2 / DA-2): AI Risk Engine & What-If Climate Simulator", level=2)
@@ -152,7 +159,7 @@ r2_bullets = [
     "3 Academic Download Engines: Export ML Audit CSV Report, Download 168-Sample Training CSV, and Download Academic PDF Dossier."
 ]
 for b in r2_bullets:
-    doc.add_paragraph(b, style='List Bullet')
+    add_standard_paragraph(b, style='List Bullet')
 
 # Review 3
 add_custom_heading("Review 3 (Phase 3 / DA-3): 2050 Climate Forecasting & Carbon Monetization", level=2)
@@ -163,7 +170,7 @@ r3_bullets = [
     "Copernicus Sentinel-2 10m NDVI Satellite Telemetry: Real-time vegetation index (NDVI = (NIR - RED)/(NIR + RED)) and 4-tier zonal unmixing (Dense Canopy, Moderate Fringes, Stressed Saplings, Water Channels)."
 ]
 for b in r3_bullets:
-    doc.add_paragraph(b, style='List Bullet')
+    add_standard_paragraph(b, style='List Bullet')
 
 # Section 4: Output Summary
 add_custom_heading("4. Key Project Deliverables & Outputs Summary", level=1)
@@ -176,9 +183,9 @@ output_items = [
     "6. Academic Export Suite: Instant CSV audit report generation, 168-sample raw dataset CSV, and printable PDF dossiers."
 ]
 for o in output_items:
-    doc.add_paragraph(o)
+    add_standard_paragraph(o)
 
 # Save document
 output_filepath = "d:/Hsm Project/Blue_Carbon_Guardian_Project_Report.docx"
 doc.save(output_filepath)
-print(f"Successfully created Word Document at: {output_filepath}")
+print(f"Successfully created Word Document with standard legible font size at: {output_filepath}")

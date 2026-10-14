@@ -47,94 +47,94 @@ export function Forecast2050Chart() {
       {/* Title & Controls */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-800 pb-4">
         <div>
-          <div className="flex items-center space-x-2 text-indigo-400 font-mono text-sm mb-1 font-bold">
+          <div className="flex items-center space-x-2 text-indigo-400 font-mono text-sm sm:text-base mb-1.5 font-bold">
             <Calendar className="w-5 h-5 text-cyan-400" />
-            <span className="px-2.5 py-1 bg-indigo-950 text-indigo-200 border border-indigo-600/60 rounded-lg text-xs">Review 3 2050 Climate Forecast</span>
+            <span className="px-3 py-1.5 bg-indigo-950 text-indigo-200 border border-indigo-600/60 rounded-lg text-xs sm:text-sm font-semibold">Review 3 2050 Climate Forecast</span>
             <span>• IPCC AR6 Multi-Scenario Suite</span>
           </div>
-          <h2 className="text-xl sm:text-2xl font-extrabold text-slate-100">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-100">
             2025–2050 Mangrove Canopy Long-Term Trajectory Forecasting
           </h2>
-          <p className="text-sm text-slate-300 mt-1">
+          <p className="text-base sm:text-lg text-slate-200 mt-2 leading-relaxed">
             Multi-scenario predictive polynomial model evaluating Tamil Nadu canopy area (`ha`) across 4 IPCC AR6 pathways (SSP1-2.6, SSP2-4.5, SSP3-7.0, SSP5-8.5) up to Year 2050.
           </p>
         </div>
 
         {/* IPCC Multi-Scenario Toggle Buttons */}
-        <div className="flex flex-wrap items-center gap-1.5 shrink-0">
+        <div className="flex flex-wrap items-center gap-2 shrink-0">
           <button
             onClick={() => setIpccScenario('ssp126')}
-            className={`px-3 py-1.5 rounded-xl text-xs font-mono font-bold transition cursor-pointer flex items-center space-x-1 ${
+            className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-mono font-bold transition cursor-pointer flex items-center space-x-1.5 ${
               ipccScenario === 'ssp126'
                 ? 'bg-teal-950 text-teal-300 border border-teal-500 shadow-lg'
-                : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800'
+                : 'bg-slate-900 text-slate-300 hover:text-white border border-slate-800'
             }`}
           >
-            <ShieldCheck className="w-3.5 h-3.5 text-teal-400" />
+            <ShieldCheck className="w-4 h-4 text-teal-400" />
             <span>SSP1-2.6 (Paris Goal)</span>
           </button>
 
           <button
             onClick={() => setIpccScenario('ssp245')}
-            className={`px-3 py-1.5 rounded-xl text-xs font-mono font-bold transition cursor-pointer flex items-center space-x-1 ${
+            className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-mono font-bold transition cursor-pointer flex items-center space-x-1.5 ${
               ipccScenario === 'ssp245'
                 ? 'bg-emerald-950 text-emerald-300 border border-emerald-500 shadow-lg'
-                : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800'
+                : 'bg-slate-900 text-slate-300 hover:text-white border border-slate-800'
             }`}
           >
-            <Activity className="w-3.5 h-3.5 text-emerald-400" />
+            <Activity className="w-4 h-4 text-emerald-400" />
             <span>SSP2-4.5 (Moderate)</span>
           </button>
 
           <button
             onClick={() => setIpccScenario('ssp370')}
-            className={`px-3 py-1.5 rounded-xl text-xs font-mono font-bold transition cursor-pointer flex items-center space-x-1 ${
+            className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-mono font-bold transition cursor-pointer flex items-center space-x-1.5 ${
               ipccScenario === 'ssp370'
                 ? 'bg-amber-950 text-amber-300 border border-amber-500 shadow-lg'
-                : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800'
+                : 'bg-slate-900 text-slate-300 hover:text-white border border-slate-800'
             }`}
           >
-            <AlertTriangle className="w-3.5 h-3.5 text-amber-400" />
+            <AlertTriangle className="w-4 h-4 text-amber-400" />
             <span>SSP3-7.0 (High Stress)</span>
           </button>
 
           <button
             onClick={() => setIpccScenario('ssp585')}
-            className={`px-3 py-1.5 rounded-xl text-xs font-mono font-bold transition cursor-pointer flex items-center space-x-1 ${
+            className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-mono font-bold transition cursor-pointer flex items-center space-x-1.5 ${
               ipccScenario === 'ssp585'
                 ? 'bg-rose-950 text-rose-300 border border-rose-500 shadow-lg'
-                : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800'
+                : 'bg-slate-900 text-slate-300 hover:text-white border border-slate-800'
             }`}
           >
-            <AlertTriangle className="w-3.5 h-3.5 text-rose-400" />
+            <AlertTriangle className="w-4 h-4 text-rose-400" />
             <span>SSP5-8.5 (Extreme)</span>
           </button>
 
           <button
             onClick={() => setIpccScenario('all')}
-            className={`px-3 py-1.5 rounded-xl text-xs font-mono font-bold transition cursor-pointer flex items-center space-x-1 ${
+            className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-mono font-bold transition cursor-pointer flex items-center space-x-1.5 ${
               ipccScenario === 'all'
                 ? 'bg-indigo-950 text-cyan-300 border border-cyan-500 shadow-lg'
-                : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800'
+                : 'bg-slate-900 text-slate-300 hover:text-white border border-slate-800'
             }`}
           >
-            <BarChart3 className="w-3.5 h-3.5 text-cyan-400" />
+            <BarChart3 className="w-4 h-4 text-cyan-400" />
             <span>Compare All</span>
           </button>
         </div>
       </div>
 
       {/* Chart Canvas */}
-      <div className="bg-slate-950/80 p-5 rounded-2xl border border-slate-800 space-y-4">
-        <div className="flex items-center justify-between text-xs font-mono border-b border-slate-800 pb-2">
-          <span className="text-slate-300 font-semibold flex items-center">
-            <Layers className="w-4 h-4 text-cyan-400 mr-1.5" />
+      <div className="bg-slate-950/80 p-5 sm:p-6 rounded-2xl border border-slate-800 space-y-4">
+        <div className="flex items-center justify-between text-sm sm:text-base font-mono border-b border-slate-800 pb-3">
+          <span className="text-slate-200 font-bold flex items-center">
+            <Layers className="w-5 h-5 text-cyan-400 mr-2" />
             Statewide Canopy Projection Curve (Hectares: 2023 – 2050)
           </span>
-          <span className="text-cyan-400 font-bold">Model Confidence $R^2 = 0.985$</span>
+          <span className="text-cyan-400 font-extrabold text-sm sm:text-base">Model Confidence $R^2 = 0.985$</span>
         </div>
 
-        <div className="h-[360px] w-full pt-2">
+        <div className="h-[380px] w-full pt-2">
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart data={forecastData} margin={{ top: 10, right: 20, left: 10, bottom: 0 }}>
               <defs>
@@ -160,11 +160,11 @@ export function Forecast2050Chart() {
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-              <XAxis dataKey="year" stroke="#94a3b8" fontSize={11} fontFamily="monospace" />
-              <YAxis stroke="#94a3b8" fontSize={11} fontFamily="monospace" domain={[20000, 35000]} />
+              <XAxis dataKey="year" stroke="#94a3b8" fontSize={13} fontFamily="monospace" />
+              <YAxis stroke="#94a3b8" fontSize={13} fontFamily="monospace" domain={[20000, 35000]} />
               <Tooltip content={<CustomTooltip />} />
-              <Legend verticalAlign="top" height={36} wrapperStyle={{ fontSize: '11px', fontFamily: 'monospace', fontWeight: 'bold' }} />
-              <ReferenceLine x="2023" stroke="#06b6d4" strokeDasharray="4 4" label={{ value: '2023 Baseline', fill: '#06b6d4', fontSize: 10, position: 'top' }} />
+              <Legend verticalAlign="top" height={40} wrapperStyle={{ fontSize: '13px', fontFamily: 'monospace', fontWeight: 'bold' }} />
+              <ReferenceLine x="2023" stroke="#06b6d4" strokeDasharray="4 4" label={{ value: '2023 Baseline', fill: '#06b6d4', fontSize: 12, position: 'top' }} />
 
               <Area
                 type="monotone"
@@ -231,30 +231,30 @@ export function Forecast2050Chart() {
           </ResponsiveContainer>
         </div>
 
-        {/* 2050 Comparative Horizon Metric Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 pt-3 border-t border-slate-800 font-mono text-xs">
-          <div className="bg-slate-900/90 p-3.5 rounded-xl border border-teal-500/30 space-y-1">
-            <span className="text-teal-400 text-[10px] uppercase font-bold">SSP1-2.6 (Paris Goal)</span>
-            <div className="text-lg sm:text-xl font-extrabold text-teal-300">33,100 ha</div>
-            <span className="text-emerald-400 text-[10px] block">+15.98% High Recovery</span>
+        {/* 2050 Comparative Horizon Metric Cards with Standard Legible Sizes */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-4 border-t border-slate-800 font-mono">
+          <div className="bg-slate-900/90 p-4 sm:p-5 rounded-2xl border border-teal-500/40 space-y-2">
+            <span className="text-teal-400 text-xs sm:text-sm uppercase font-bold tracking-wider block">SSP1-2.6 (Paris Goal)</span>
+            <div className="text-2xl sm:text-3xl font-black text-teal-300">33,100 ha</div>
+            <span className="text-emerald-400 text-xs sm:text-sm font-bold block">+15.98% High Recovery</span>
           </div>
 
-          <div className="bg-slate-900/90 p-3.5 rounded-xl border border-cyan-500/30 space-y-1">
-            <span className="text-cyan-400 text-[10px] uppercase font-bold">SSP2-4.5 (Moderate)</span>
-            <div className="text-lg sm:text-xl font-extrabold text-cyan-300">30,100 ha</div>
-            <span className="text-cyan-400 text-[10px] block">+5.47% Steady Growth</span>
+          <div className="bg-slate-900/90 p-4 sm:p-5 rounded-2xl border border-cyan-500/40 space-y-2">
+            <span className="text-cyan-400 text-xs sm:text-sm uppercase font-bold tracking-wider block">SSP2-4.5 (Moderate)</span>
+            <div className="text-2xl sm:text-3xl font-black text-cyan-300">30,100 ha</div>
+            <span className="text-cyan-400 text-xs sm:text-sm font-bold block">+5.47% Steady Growth</span>
           </div>
 
-          <div className="bg-slate-900/90 p-3.5 rounded-xl border border-amber-500/30 space-y-1">
-            <span className="text-amber-400 text-[10px] uppercase font-bold">SSP3-7.0 ('SSP 3.7')</span>
-            <div className="text-lg sm:text-xl font-extrabold text-amber-300">23,400 ha</div>
-            <span className="text-rose-400 text-[10px] block">-18.01% High Degradation</span>
+          <div className="bg-slate-900/90 p-4 sm:p-5 rounded-2xl border border-amber-500/40 space-y-2">
+            <span className="text-amber-400 text-xs sm:text-sm uppercase font-bold tracking-wider block">SSP3-7.0 ('SSP 3.7')</span>
+            <div className="text-2xl sm:text-3xl font-black text-amber-300">23,400 ha</div>
+            <span className="text-rose-400 text-xs sm:text-sm font-bold block">-18.01% High Loss</span>
           </div>
 
-          <div className="bg-slate-900/90 p-3.5 rounded-xl border border-rose-500/30 space-y-1">
-            <span className="text-rose-400 text-[10px] uppercase font-bold">SSP5-8.5 (Extreme)</span>
-            <div className="text-lg sm:text-xl font-extrabold text-rose-300">21,800 ha</div>
-            <span className="text-rose-400 text-[10px] block">-23.61% Severe Canopy Loss</span>
+          <div className="bg-slate-900/90 p-4 sm:p-5 rounded-2xl border border-rose-500/40 space-y-2">
+            <span className="text-rose-400 text-xs sm:text-sm uppercase font-bold tracking-wider block">SSP5-8.5 (Extreme)</span>
+            <div className="text-2xl sm:text-3xl font-black text-rose-300">21,800 ha</div>
+            <span className="text-rose-400 text-xs sm:text-sm font-bold block">-23.61% Severe Loss</span>
           </div>
         </div>
       </div>

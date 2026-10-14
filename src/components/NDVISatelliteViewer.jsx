@@ -211,40 +211,40 @@ export default function NDVISatelliteViewer() {
         
         {/* Left Column: Satellite Metadata & Telemetry Cards */}
         <div className="lg:col-span-4 space-y-4">
-          <div className="bg-slate-950/80 border border-slate-800 rounded-2xl p-4">
-            <div className="text-xs text-slate-400 uppercase tracking-wide font-semibold mb-2 flex items-center justify-between">
+          <div className="bg-slate-950/80 border border-slate-800 rounded-2xl p-5 shadow-lg">
+            <div className="text-xs sm:text-sm text-slate-300 uppercase tracking-wide font-bold mb-3 flex items-center justify-between">
               <span>Satellite Telemetry</span>
-              <span className="text-emerald-400 font-mono text-[11px]">{site.sentinelTile}</span>
+              <span className="text-emerald-300 font-mono font-bold text-xs sm:text-sm">{site.sentinelTile}</span>
             </div>
-            <div className="space-y-2 text-xs">
-              <div className="flex justify-between border-b border-slate-800/60 pb-1.5">
-                <span className="text-slate-400">Target Wetland:</span>
-                <span className="font-semibold text-slate-200">{site.name}</span>
+            <div className="space-y-2.5 text-sm">
+              <div className="flex justify-between border-b border-slate-800/80 pb-2">
+                <span className="text-slate-300">Target Wetland:</span>
+                <span className="font-bold text-white">{site.name}</span>
               </div>
-              <div className="flex justify-between border-b border-slate-800/60 pb-1.5">
-                <span className="text-slate-400">Sensor / Orbit:</span>
-                <span className="font-semibold text-slate-200">{site.lastAcquisition}</span>
+              <div className="flex justify-between border-b border-slate-800/80 pb-2">
+                <span className="text-slate-300">Sensor / Orbit:</span>
+                <span className="font-semibold text-slate-100">{site.lastAcquisition}</span>
               </div>
-              <div className="flex justify-between border-b border-slate-800/60 pb-1.5">
-                <span className="text-slate-400">Cloud Cover:</span>
-                <span className="font-mono text-emerald-400">{site.cloudCover}</span>
+              <div className="flex justify-between border-b border-slate-800/80 pb-2">
+                <span className="text-slate-300">Cloud Cover:</span>
+                <span className="font-mono text-emerald-300 font-bold">{site.cloudCover}</span>
               </div>
-              <div className="flex justify-between border-b border-slate-800/60 pb-1.5">
-                <span className="text-slate-400">Spatial Resolution:</span>
-                <span className="font-mono text-cyan-400">10m x 10m Multi-spectral</span>
+              <div className="flex justify-between border-b border-slate-800/80 pb-2">
+                <span className="text-slate-300">Spatial Resolution:</span>
+                <span className="font-mono text-cyan-300 font-bold">10m x 10m Multi-spectral</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-slate-400">Band 8 (NIR Reflectance):</span>
-                <span className="font-mono text-purple-400">{site.bandNIR}</span>
+                <span className="text-slate-300">Band 8 (NIR Reflectance):</span>
+                <span className="font-mono text-purple-300 font-bold">{site.bandNIR}</span>
               </div>
             </div>
           </div>
 
           {/* Seasonal Simulation Slider */}
-          <div className="bg-slate-950/80 border border-slate-800 rounded-2xl p-4">
-            <label className="text-xs font-semibold text-slate-300 flex justify-between items-center mb-2">
+          <div className="bg-slate-950/80 border border-slate-800 rounded-2xl p-5 shadow-lg">
+            <label className="text-xs sm:text-sm font-bold text-slate-200 flex justify-between items-center mb-2.5">
               <span>Seasonal Climate Simulation:</span>
-              <span className="text-emerald-400 font-mono text-[11px]">
+              <span className="text-emerald-300 font-mono font-bold text-xs">
                 {seasonalOffset === 0 ? 'Normal Dry Baseline' : seasonalOffset > 0 ? `+${(seasonalOffset * 100).toFixed(0)}% Monsoon Greening` : `${(seasonalOffset * 100).toFixed(0)}% Heatwave Stress`}
               </span>
             </label>
@@ -255,9 +255,9 @@ export default function NDVISatelliteViewer() {
               step="0.05"
               value={seasonalOffset}
               onChange={(e) => setSeasonalOffset(parseFloat(e.target.value))}
-              className="w-full accent-emerald-500 cursor-pointer h-2 bg-slate-800 rounded-lg"
+              className="w-full accent-emerald-500 cursor-pointer h-2.5 bg-slate-800 rounded-lg"
             />
-            <div className="flex justify-between text-[10px] text-slate-500 mt-1 font-mono">
+            <div className="flex justify-between text-xs text-slate-300 mt-1.5 font-mono">
               <span>Summer Heat (-15%)</span>
               <span>Baseline</span>
               <span>NE Monsoon (+10%)</span>
@@ -265,12 +265,12 @@ export default function NDVISatelliteViewer() {
           </div>
 
           {/* Notes Box */}
-          <div className="bg-emerald-950/20 border border-emerald-500/20 rounded-2xl p-4 text-xs">
-            <div className="flex items-center gap-1.5 text-emerald-400 font-semibold mb-1">
-              <CheckCircle className="w-3.5 h-3.5" />
+          <div className="bg-emerald-950/30 border border-emerald-500/40 rounded-2xl p-5 text-sm shadow-lg">
+            <div className="flex items-center gap-2 text-emerald-300 font-bold mb-1.5">
+              <CheckCircle className="w-4 h-4" />
               <span>Spectral Diagnostic Notes</span>
             </div>
-            <p className="text-slate-300 leading-relaxed">{site.notes}</p>
+            <p className="text-slate-200 leading-relaxed font-normal">{site.notes}</p>
           </div>
         </div>
 
@@ -278,28 +278,28 @@ export default function NDVISatelliteViewer() {
         <div className="lg:col-span-8 space-y-4">
           
           {/* NDVI Main Reading Header Card */}
-          <div className="bg-slate-950/90 border border-slate-800 rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="bg-slate-950/90 border border-slate-800 rounded-2xl p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xl">
             <div>
-              <span className="text-xs text-slate-400 uppercase font-semibold">Calculated Canopy NDVI Score</span>
-              <div className="flex items-baseline gap-3 mt-1">
-                <span className="text-4xl font-black font-mono" style={{ color: getNDVIColor(currentNDVI) }}>
+              <span className="text-xs sm:text-sm text-slate-300 uppercase font-bold tracking-wider">Calculated Canopy NDVI Score</span>
+              <div className="flex items-baseline gap-3 mt-1.5">
+                <span className="text-5xl sm:text-6xl font-black font-mono" style={{ color: getNDVIColor(currentNDVI) }}>
                   {currentNDVI.toFixed(2)}
                 </span>
-                <span className="text-xs font-semibold px-2.5 py-1 rounded-full border border-slate-700 bg-slate-900" style={{ color: getNDVIColor(currentNDVI) }}>
+                <span className="text-xs sm:text-sm font-bold px-3 py-1.5 rounded-full border border-slate-700 bg-slate-900 shadow-md" style={{ color: getNDVIColor(currentNDVI) }}>
                   {getNDVILabel(currentNDVI)}
                 </span>
               </div>
             </div>
 
             {/* Simulated Color Spectrum Bar */}
-            <div className="w-full sm:w-56">
-              <div className="text-[11px] text-slate-400 mb-1 flex justify-between">
+            <div className="w-full sm:w-64">
+              <div className="text-xs text-slate-300 mb-1.5 flex justify-between font-mono font-bold">
                 <span>0.0 (Water)</span>
                 <span>1.0 (Dense Canopy)</span>
               </div>
-              <div className="h-3 rounded-full bg-gradient-to-r from-red-500 via-amber-400 via-lime-400 to-emerald-500 relative">
+              <div className="h-4 rounded-full bg-gradient-to-r from-red-500 via-amber-400 via-lime-400 to-emerald-500 relative">
                 <div 
-                  className="absolute top-1/2 -translate-y-1/2 w-4 h-5 bg-white border-2 border-slate-900 rounded-sm shadow-md transition-all duration-300"
+                  className="absolute top-1/2 -translate-y-1/2 w-4 h-6 bg-white border-2 border-slate-900 rounded-sm shadow-md transition-all duration-300"
                   style={{ left: `${Math.min(95, Math.max(2, currentNDVI * 100))}%` }}
                 />
               </div>
@@ -307,37 +307,37 @@ export default function NDVISatelliteViewer() {
           </div>
 
           {/* Spectral Health Breakdown Visual Grid */}
-          <div className="bg-slate-950/80 border border-slate-800 rounded-2xl p-5">
-            <div className="text-xs font-semibold text-slate-300 uppercase tracking-wide mb-3 flex items-center justify-between">
+          <div className="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 shadow-xl">
+            <div className="text-xs sm:text-sm font-bold text-slate-200 uppercase tracking-wide mb-4 flex items-center justify-between">
               <span>Zonal Canopy Health Distribution (% Area)</span>
-              <span className="text-slate-500 text-[11px]">Sentinel-2 Spectral Unmixing</span>
+              <span className="text-slate-400 text-xs font-mono">Sentinel-2 Spectral Unmixing</span>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div className="bg-slate-900 border border-emerald-500/30 rounded-xl p-3 text-center">
-                <div className="w-3 h-3 rounded-full bg-emerald-500 mx-auto mb-1" />
-                <span className="text-[11px] text-slate-400 block">Dense Canopy</span>
-                <span className="text-lg font-bold text-white font-mono">{site.healthBreakdown.dense}%</span>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div className="bg-slate-900/90 border border-emerald-500/40 rounded-2xl p-4 text-center shadow-md">
+                <div className="w-3.5 h-3.5 rounded-full bg-emerald-500 mx-auto mb-1.5" />
+                <span className="text-xs text-slate-300 font-bold block">Dense Canopy</span>
+                <span className="text-2xl font-black text-white font-mono mt-0.5">{site.healthBreakdown.dense}%</span>
               </div>
-              <div className="bg-slate-900 border border-lime-500/30 rounded-xl p-3 text-center">
-                <div className="w-3 h-3 rounded-full bg-lime-400 mx-auto mb-1" />
-                <span className="text-[11px] text-slate-400 block">Moderate Fringes</span>
-                <span className="text-lg font-bold text-white font-mono">{site.healthBreakdown.moderate}%</span>
+              <div className="bg-slate-900/90 border border-lime-500/40 rounded-2xl p-4 text-center shadow-md">
+                <div className="w-3.5 h-3.5 rounded-full bg-lime-400 mx-auto mb-1.5" />
+                <span className="text-xs text-slate-300 font-bold block">Moderate Fringes</span>
+                <span className="text-2xl font-black text-white font-mono mt-0.5">{site.healthBreakdown.moderate}%</span>
               </div>
-              <div className="bg-slate-900 border border-amber-500/30 rounded-xl p-3 text-center">
-                <div className="w-3 h-3 rounded-full bg-amber-400 mx-auto mb-1" />
-                <span className="text-[11px] text-slate-400 block">Stressed / Sapling</span>
-                <span className="text-lg font-bold text-white font-mono">{site.healthBreakdown.degraded}%</span>
+              <div className="bg-slate-900/90 border border-amber-500/40 rounded-2xl p-4 text-center shadow-md">
+                <div className="w-3.5 h-3.5 rounded-full bg-amber-400 mx-auto mb-1.5" />
+                <span className="text-xs text-slate-300 font-bold block">Stressed / Sapling</span>
+                <span className="text-2xl font-black text-white font-mono mt-0.5">{site.healthBreakdown.degraded}%</span>
               </div>
-              <div className="bg-slate-900 border border-blue-500/30 rounded-xl p-3 text-center">
-                <div className="w-3 h-3 rounded-full bg-blue-400 mx-auto mb-1" />
-                <span className="text-[11px] text-slate-400 block">Water / Channel</span>
-                <span className="text-lg font-bold text-white font-mono">{site.healthBreakdown.water}%</span>
+              <div className="bg-slate-900/90 border border-blue-500/40 rounded-2xl p-4 text-center shadow-md">
+                <div className="w-3.5 h-3.5 rounded-full bg-blue-400 mx-auto mb-1.5" />
+                <span className="text-xs text-slate-300 font-bold block">Water / Channel</span>
+                <span className="text-2xl font-black text-white font-mono mt-0.5">{site.healthBreakdown.water}%</span>
               </div>
             </div>
 
             {/* Stacked Percentage Bar */}
-            <div className="w-full h-4 bg-slate-900 rounded-full overflow-hidden flex mt-4 border border-slate-800">
+            <div className="w-full h-5 bg-slate-900 rounded-full overflow-hidden flex mt-5 border border-slate-800">
               <div style={{ width: `${site.healthBreakdown.dense}%` }} className="bg-emerald-500 h-full" title="Dense Canopy" />
               <div style={{ width: `${site.healthBreakdown.moderate}%` }} className="bg-lime-400 h-full" title="Moderate Canopy" />
               <div style={{ width: `${site.healthBreakdown.degraded}%` }} className="bg-amber-400 h-full" title="Stressed Fringes" />
@@ -346,10 +346,10 @@ export default function NDVISatelliteViewer() {
           </div>
 
           {/* Academic Remote Sensing Method Summary */}
-          <div className="bg-slate-950/60 border border-slate-800/80 rounded-2xl p-4 text-xs text-slate-400 flex items-start gap-3">
-            <Sparkles className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+          <div className="bg-slate-950/60 border border-slate-800/80 rounded-2xl p-5 text-sm text-slate-200 flex items-start gap-3.5 shadow-lg">
+            <Sparkles className="w-6 h-6 text-emerald-400 shrink-0 mt-0.5" />
             <div>
-              <span className="font-semibold text-slate-200 block mb-0.5">Satellite Data Verification Protocol</span>
+              <span className="font-black text-white block mb-1">Satellite Data Verification Protocol</span>
               Copernicus Sentinel-2 MSI surface reflectance (Level-2A) processed with atmospheric correction (Sen2Cor). NDVI values directly calibrate the XGBoost biomass density regression model for Tamil Nadu sanctuaries ($R^2 = 0.985$).
             </div>
           </div>

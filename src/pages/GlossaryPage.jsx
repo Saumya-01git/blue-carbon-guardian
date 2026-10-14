@@ -118,38 +118,38 @@ export function GlossaryPage() {
   return (
     <div className="space-y-8 py-4">
       {/* Header */}
-      <div className="glass-panel p-6 rounded-2xl border border-slate-800 space-y-2">
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-100 flex items-center">
-          <BookOpen className="w-7 h-7 mr-3 text-emerald-400" />
+      <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-2 shadow-xl">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white flex items-center">
+          <BookOpen className="w-8 h-8 mr-3 text-emerald-400" />
           Environmental Glossary & Simple Key Terms Guide
         </h1>
-        <p className="text-xs sm:text-sm text-slate-400">
+        <p className="text-sm sm:text-base text-slate-200 font-medium">
           Simple, plain-English definitions of scientific environmental terms, coastal risk indicators, climate metrics, and conservation schemes used in this application.
         </p>
       </div>
 
       {/* Search & Filter Controls */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="relative w-full sm:w-80">
-          <Search className="w-4 h-4 absolute left-3 top-3 text-slate-400" />
+        <div className="relative w-full sm:w-96">
+          <Search className="w-5 h-5 absolute left-3.5 top-3.5 text-slate-400" />
           <input
             type="text"
             placeholder="Search key terms (e.g. erosion, fishbone)..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-9 pr-4 py-2 bg-slate-900 border border-slate-800 rounded-xl text-xs text-slate-200 focus:outline-none focus:border-emerald-500"
+            className="w-full pl-11 pr-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-sm text-white focus:outline-none focus:border-emerald-500 font-medium shadow-md"
           />
         </div>
 
-        <div className="flex items-center space-x-1.5 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0">
+        <div className="flex items-center space-x-2 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0">
           {categories.map(cat => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all shrink-0 cursor-pointer ${
+              className={`px-4 py-2.5 rounded-xl text-sm font-bold transition-all shrink-0 cursor-pointer ${
                 selectedCategory === cat
-                  ? 'bg-emerald-600 text-white shadow-md shadow-emerald-950/60'
-                  : 'bg-slate-900 text-slate-300 border border-slate-800 hover:bg-slate-800'
+                  ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-950/80 border border-emerald-300'
+                  : 'bg-slate-900 text-slate-200 border border-slate-700 hover:bg-slate-800 hover:border-emerald-400'
               }`}
             >
               {cat}
@@ -159,34 +159,34 @@ export function GlossaryPage() {
       </div>
 
       {/* Terms Dictionary Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {filteredTerms.map((item, index) => (
           <div
             key={index}
-            className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-3 hover:border-emerald-500/40 transition-all"
+            className="glass-panel glass-panel-glow p-6 sm:p-7 rounded-3xl border border-slate-800 space-y-4 hover:border-emerald-500/50 transition-all shadow-xl"
           >
             <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
-                <div className="p-2 rounded-lg bg-slate-900 border border-slate-800">
+              <div className="flex items-center space-x-3">
+                <div className="p-3 rounded-xl bg-slate-900 border border-slate-700">
                   {item.icon}
                 </div>
-                <h3 className="text-base font-bold text-slate-100">{item.term}</h3>
+                <h3 className="text-lg sm:text-xl font-black text-white">{item.term}</h3>
               </div>
-              <span className="px-2.5 py-0.5 rounded-full bg-slate-900 text-emerald-300 border border-slate-800 text-[10px] font-mono">
+              <span className="px-3 py-1 rounded-lg bg-slate-900 text-emerald-300 border border-slate-700 text-xs font-mono font-bold">
                 {item.category}
               </span>
             </div>
 
-            <div className="p-3 bg-emerald-950/30 border border-emerald-800/40 rounded-xl space-y-1">
-              <div className="text-[10px] text-emerald-400 font-mono font-bold uppercase tracking-wider">
+            <div className="p-4 bg-emerald-950/40 border border-emerald-700/60 rounded-2xl space-y-1.5 shadow-md">
+              <div className="text-xs text-emerald-300 font-mono font-black uppercase tracking-wider">
                 💡 Simple English Definition:
               </div>
-              <p className="text-xs font-semibold text-slate-200 leading-relaxed">
+              <p className="text-sm sm:text-base font-bold text-slate-100 leading-relaxed">
                 {item.simpleDefinition}
               </p>
             </div>
 
-            <div className="text-xs text-slate-400 leading-relaxed pt-1">
+            <div className="text-sm text-slate-200 leading-relaxed pt-1 font-normal">
               {item.detailedDescription}
             </div>
           </div>

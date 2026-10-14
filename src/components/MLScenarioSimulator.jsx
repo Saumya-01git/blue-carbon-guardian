@@ -69,17 +69,17 @@ export function MLScenarioSimulator({ sitesData, onSimulationChange }) {
             <Sliders className="w-5 h-5 text-cyan-400" />
             <span>Interactive Policy & Climate Scenario Engine</span>
           </div>
-          <h2 className="text-xl sm:text-2xl font-extrabold text-slate-100">
+          <h2 className="text-2xl sm:text-3xl font-black text-white">
             "What-If" Ecosystem Vulnerability Simulator
           </h2>
-          <p className="text-sm text-slate-300 mt-1">
-            Manipulate climate stress sliders to simulate real-time ML risk recalculation across Tamil Nadu's 8 coastal sanctuaries.
+          <p className="text-sm sm:text-base text-slate-200 mt-1 font-medium">
+            Manipulate climate stress sliders to simulate real-time ML risk recalculation across Tamil Nadu's {calculatedSites.length} coastal sanctuaries.
           </p>
         </div>
 
         <button 
           onClick={handleReset}
-          className="flex items-center space-x-2 px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 rounded-xl text-sm font-bold transition shadow-md cursor-pointer shrink-0"
+          className="flex items-center space-x-2 px-5 py-2.5 bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-100 rounded-xl text-sm font-bold transition shadow-md cursor-pointer shrink-0"
         >
           <RefreshCw className="w-4 h-4 text-cyan-400" />
           <span>Reset Parameters</span>
@@ -212,32 +212,32 @@ export function MLScenarioSimulator({ sitesData, onSimulationChange }) {
       </div>
 
       {/* Dynamic Simulated Results Cards - Larger Text & Bold Values */}
-      <div className="space-y-4">
-        <h3 className="text-base sm:text-lg font-bold text-slate-100 flex items-center">
-          <ShieldCheck className="w-5 h-5 text-emerald-400 mr-2" />
-          ML Predicted Vulnerability Output Across 8 Sanctuaries:
+      <div className="space-y-5">
+        <h3 className="text-xl sm:text-2xl font-black text-white flex items-center">
+          <ShieldCheck className="w-6 h-6 text-emerald-400 mr-2.5" />
+          ML Predicted Vulnerability Output Across {calculatedSites.length} Sanctuaries:
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {calculatedSites.map(site => (
-            <div key={site.id} className="bg-slate-900/80 glass-panel-glow p-5 rounded-2xl border border-slate-800 space-y-4 flex flex-col justify-between cursor-pointer">
+            <div key={site.id} className="bg-slate-900/90 glass-panel-glow p-6 rounded-2xl border border-slate-800 space-y-4 flex flex-col justify-between cursor-pointer shadow-xl">
               <div>
-                <div className="flex items-center justify-between mb-1.5 gap-2">
-                  <span className="text-base font-extrabold text-slate-100 truncate">{site.siteName}</span>
-                  <span className={`text-xs font-mono px-2.5 py-1 rounded-lg border shrink-0 ${site.statusClass}`}>
+                <div className="flex items-center justify-between mb-2 gap-2">
+                  <span className="text-lg font-black text-white truncate">{site.siteName}</span>
+                  <span className={`text-xs font-mono px-3 py-1 rounded-lg border shrink-0 ${site.statusClass}`}>
                     {site.statusLabel}
                   </span>
                 </div>
-                <div className="text-xs text-slate-300 font-mono font-semibold">{site.district} District</div>
+                <div className="text-xs sm:text-sm text-slate-300 font-mono font-bold">{site.district} District</div>
               </div>
 
               {/* Progress bar */}
-              <div className="space-y-1.5">
-                <div className="flex justify-between text-sm font-mono">
-                  <span className="text-slate-300 font-semibold">Vulnerability Score:</span>
-                  <span className="font-extrabold text-cyan-400 text-base">{site.simulatedScore}%</span>
+              <div className="space-y-2">
+                <div className="flex justify-between items-center text-sm font-mono">
+                  <span className="text-slate-200 font-bold">Vulnerability Score:</span>
+                  <span className="font-black text-cyan-300 text-lg sm:text-xl">{site.simulatedScore}%</span>
                 </div>
-                <div className="w-full h-3 bg-slate-950 rounded-full overflow-hidden border border-slate-800">
+                <div className="w-full h-3.5 bg-slate-950 rounded-full overflow-hidden border border-slate-800">
                   <div 
                     className={`h-full transition-all duration-500 rounded-full ${
                       site.simulatedScore >= 75 ? 'bg-gradient-to-r from-amber-500 to-rose-500' :
@@ -249,14 +249,14 @@ export function MLScenarioSimulator({ sitesData, onSimulationChange }) {
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-slate-800 text-xs font-mono space-y-1.5 text-slate-300">
+              <div className="pt-3 border-t border-slate-800 text-xs sm:text-sm font-mono space-y-2 text-slate-200">
                 <div className="flex justify-between">
-                  <span>Carbon At-Risk:</span>
-                  <span className="text-amber-300 font-bold">{site.carbonAtRiskTons.toLocaleString()} tCO₂e</span>
+                  <span className="text-slate-300">Carbon At-Risk:</span>
+                  <span className="text-amber-300 font-black">{site.carbonAtRiskTons.toLocaleString()} tCO₂e</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Econ. Valuation Loss:</span>
-                  <span className="text-rose-400 font-bold">${(site.carbonEconomicLossUSD / 1000).toFixed(1)}k USD</span>
+                  <span className="text-slate-300">Econ. Loss:</span>
+                  <span className="text-rose-400 font-black">${(site.carbonEconomicLossUSD / 1000).toFixed(1)}k USD</span>
                 </div>
               </div>
             </div>

@@ -82,36 +82,38 @@ export function DataSourcesPage({ dataSources }) {
       </div>
 
       {/* Data Sources Table - Enlarged Fonts */}
-      <div className="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-xl font-extrabold text-slate-100 flex items-center">
-            <ShieldCheck className="w-6 h-6 mr-2 text-emerald-400" />
+      <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-5 shadow-xl">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <h2 className="text-xl sm:text-2xl font-black text-white flex items-center">
+            <ShieldCheck className="w-7 h-7 mr-2.5 text-emerald-400" />
             Verified Source Publications ({filteredSources.length})
           </h2>
-          <span className="text-xs sm:text-sm text-slate-300 font-mono font-bold">100% Clickable Public Government URLs</span>
+          <span className="text-xs sm:text-sm text-emerald-300 font-mono font-bold bg-slate-950 px-3.5 py-1.5 rounded-xl border border-emerald-500/40">
+            100% Clickable Public Government URLs
+          </span>
         </div>
 
         <div className="overflow-x-auto">
-          <table className="w-full text-left text-sm text-slate-200">
-            <thead className="bg-slate-900 text-slate-300 font-mono text-xs uppercase border-b border-slate-800">
+          <table className="w-full text-left text-sm text-slate-100">
+            <thead className="bg-slate-900 text-slate-200 font-mono text-xs sm:text-sm uppercase border-b border-slate-800">
               <tr>
-                <th className="py-3.5 px-4 font-bold">Organization</th>
-                <th className="py-3.5 px-4 font-bold">Dataset / Report Title</th>
-                <th className="py-3.5 px-4 font-bold">Parameters Extracted</th>
-                <th className="py-3.5 px-4 font-bold">Year / Period</th>
-                <th className="py-3.5 px-4 font-bold">Geographic Level</th>
-                <th className="py-3.5 px-4 font-bold">Status</th>
-                <th className="py-3.5 px-4 text-right font-bold">Official Source Link</th>
+                <th className="py-4 px-4 font-black">Organization</th>
+                <th className="py-4 px-4 font-black">Dataset / Report Title</th>
+                <th className="py-4 px-4 font-black">Parameters Extracted</th>
+                <th className="py-4 px-4 font-black">Year / Period</th>
+                <th className="py-4 px-4 font-black">Geographic Level</th>
+                <th className="py-4 px-4 font-black">Status</th>
+                <th className="py-4 px-4 text-right font-black">Official Source Link</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-800/60 font-sans">
               {filteredSources.map(src => (
                 <tr key={src.id} className="hover:bg-slate-900/60">
-                  <td className="py-4 px-4 font-extrabold text-emerald-400">{src.organization}</td>
-                  <td className="py-4 px-4 font-bold text-slate-100">{src.dataset}</td>
-                  <td className="py-4 px-4 text-slate-300 font-medium">{src.parameter}</td>
-                  <td className="py-4 px-4 font-mono text-slate-300 font-bold">{src.year}</td>
-                  <td className="py-4 px-4 text-slate-300">{src.geographicLevel}</td>
+                  <td className="py-4 px-4 font-black text-emerald-300 text-base">{src.organization}</td>
+                  <td className="py-4 px-4 font-bold text-white text-base">{src.dataset}</td>
+                  <td className="py-4 px-4 text-slate-200 font-medium">{src.parameter}</td>
+                  <td className="py-4 px-4 font-mono text-cyan-300 font-bold">{src.year}</td>
+                  <td className="py-4 px-4 text-slate-200">{src.geographicLevel}</td>
                   <td className="py-4 px-4">
                     <DataStatusBadge status={src.status} />
                   </td>
@@ -120,7 +122,7 @@ export function DataSourcesPage({ dataSources }) {
                       href={src.sourceUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center px-3.5 py-2 bg-emerald-950 hover:bg-emerald-900 text-emerald-200 rounded-xl border border-emerald-600/60 hover:border-emerald-500 transition-colors text-xs font-bold shadow-md"
+                      className="inline-flex items-center px-4 py-2.5 bg-emerald-950 hover:bg-emerald-900 text-emerald-200 rounded-xl border border-emerald-600 hover:border-emerald-400 transition-colors text-sm font-bold shadow-md"
                     >
                       <span>Access Portal</span>
                       <ExternalLink className="w-4 h-4 ml-1.5" />

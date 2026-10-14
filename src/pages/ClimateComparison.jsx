@@ -50,111 +50,111 @@ export function ClimateComparison({ locations, environmentalData, fsiMangroveTre
   return (
     <div className="space-y-8 py-4">
       {/* Header */}
-      <div className="glass-panel p-6 rounded-2xl border border-slate-800 space-y-2">
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-100 flex items-center">
-          <BarChart3 className="w-7 h-7 mr-3 text-cyan-400" />
+      <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-2 shadow-xl">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white flex items-center">
+          <BarChart3 className="w-8 h-8 mr-3 text-cyan-400" />
           Global Coastal & Mangrove Analytics Dashboard
         </h1>
-        <p className="text-xs sm:text-sm text-slate-400">
-          Side-by-side comparative analysis of all 8 Tamil Nadu Mangrove Sanctuaries across Climate, FSI Canopy Density, Degradation Drivers, NCCR Shoreline Erosion, INCOIS Sea Level Rise, and IMD Cyclone History.
+        <p className="text-sm sm:text-base text-slate-200 font-medium">
+          Side-by-side comparative analysis of all {locations.length} Tamil Nadu Coastal & Mangrove Sanctuaries across Climate, FSI Canopy Density, Degradation Drivers, NCCR Shoreline Erosion, INCOIS Sea Level Rise, and IMD Cyclone History.
         </p>
       </div>
 
       {/* Comparison Selector Tabs */}
-      <div className="flex items-center space-x-2 flex-wrap gap-y-2">
+      <div className="flex items-center space-x-2.5 flex-wrap gap-y-2.5">
         <button
           onClick={() => setActiveTab('mangroveFsi')}
-          className={`px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center transition-all cursor-pointer ${
+          className={`px-4 py-2.5 rounded-xl text-sm font-bold flex items-center transition-all cursor-pointer ${
             activeTab === 'mangroveFsi'
-              ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-lg shadow-emerald-950/50'
-              : 'bg-slate-900 text-slate-300 border border-slate-800 hover:bg-slate-800'
+              ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-lg shadow-emerald-950/80 border border-emerald-300'
+              : 'bg-slate-900 text-slate-200 border border-slate-800 hover:bg-slate-800'
           }`}
         >
-          <TreePine className="w-4 h-4 mr-1.5" />
+          <TreePine className="w-4 h-4 mr-2" />
           Mangrove Cover (FSI 2013–2023)
         </button>
 
         <button
           onClick={() => setActiveTab('canopyDensity')}
-          className={`px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center transition-all cursor-pointer ${
+          className={`px-4 py-2.5 rounded-xl text-sm font-bold flex items-center transition-all cursor-pointer ${
             activeTab === 'canopyDensity'
-              ? 'bg-gradient-to-r from-teal-600 to-emerald-600 text-white shadow-lg shadow-teal-950/50'
-              : 'bg-slate-900 text-slate-300 border border-slate-800 hover:bg-slate-800'
+              ? 'bg-gradient-to-r from-teal-600 to-emerald-600 text-white shadow-lg shadow-teal-950/80 border border-teal-300'
+              : 'bg-slate-900 text-slate-200 border border-slate-800 hover:bg-slate-800'
           }`}
         >
-          <Layers className="w-4 h-4 mr-1.5" />
+          <Layers className="w-4 h-4 mr-2" />
           FSI Canopy Density Classes
         </button>
 
         <button
           onClick={() => setActiveTab('degradationDrivers')}
-          className={`px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center transition-all cursor-pointer ${
+          className={`px-4 py-2.5 rounded-xl text-sm font-bold flex items-center transition-all cursor-pointer ${
             activeTab === 'degradationDrivers'
-              ? 'bg-gradient-to-r from-rose-700 to-amber-600 text-white shadow-lg shadow-rose-950/50'
-              : 'bg-slate-900 text-slate-300 border border-slate-800 hover:bg-slate-800'
+              ? 'bg-gradient-to-r from-rose-700 to-amber-600 text-white shadow-lg shadow-rose-950/80 border border-rose-300'
+              : 'bg-slate-900 text-slate-200 border border-slate-800 hover:bg-slate-800'
           }`}
         >
-          <PieIcon className="w-4 h-4 mr-1.5" />
+          <PieIcon className="w-4 h-4 mr-2" />
           Mangrove Loss Drivers (%)
         </button>
 
         <button
           onClick={() => setActiveTab('tempComparison')}
-          className={`px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center transition-all cursor-pointer ${
+          className={`px-4 py-2.5 rounded-xl text-sm font-bold flex items-center transition-all cursor-pointer ${
             activeTab === 'tempComparison'
-              ? 'bg-gradient-to-r from-rose-600 to-amber-600 text-white shadow-lg shadow-rose-950/50'
-              : 'bg-slate-900 text-slate-300 border border-slate-800 hover:bg-slate-800'
+              ? 'bg-gradient-to-r from-rose-600 to-amber-600 text-white shadow-lg shadow-rose-950/80 border border-rose-300'
+              : 'bg-slate-900 text-slate-200 border border-slate-800 hover:bg-slate-800'
           }`}
         >
-          <Thermometer className="w-4 h-4 mr-1.5" />
+          <Thermometer className="w-4 h-4 mr-2" />
           Temperature Comparison (°C)
         </button>
 
         <button
           onClick={() => setActiveTab('rainfallComparison')}
-          className={`px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center transition-all cursor-pointer ${
+          className={`px-4 py-2.5 rounded-xl text-sm font-bold flex items-center transition-all cursor-pointer ${
             activeTab === 'rainfallComparison'
-              ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-950/50'
-              : 'bg-slate-900 text-slate-300 border border-slate-800 hover:bg-slate-800'
+              ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-950/80 border border-blue-300'
+              : 'bg-slate-900 text-slate-200 border border-slate-800 hover:bg-slate-800'
           }`}
         >
-          <CloudRain className="w-4 h-4 mr-1.5" />
+          <CloudRain className="w-4 h-4 mr-2" />
           Annual Rainfall Normal (mm)
         </button>
 
         <button
           onClick={() => setActiveTab('erosionComparison')}
-          className={`px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center transition-all cursor-pointer ${
+          className={`px-4 py-2.5 rounded-xl text-sm font-bold flex items-center transition-all cursor-pointer ${
             activeTab === 'erosionComparison'
-              ? 'bg-gradient-to-r from-amber-600 to-rose-600 text-white shadow-lg shadow-amber-950/50'
-              : 'bg-slate-900 text-slate-300 border border-slate-800 hover:bg-slate-800'
+              ? 'bg-gradient-to-r from-amber-600 to-rose-600 text-white shadow-lg shadow-amber-950/80 border border-amber-300'
+              : 'bg-slate-900 text-slate-200 border border-slate-800 hover:bg-slate-800'
           }`}
         >
-          <Waves className="w-4 h-4 mr-1.5" />
+          <Waves className="w-4 h-4 mr-2" />
           Shoreline Erosion (%)
         </button>
 
         <button
           onClick={() => setActiveTab('seaLevelComparison')}
-          className={`px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center transition-all cursor-pointer ${
+          className={`px-4 py-2.5 rounded-xl text-sm font-bold flex items-center transition-all cursor-pointer ${
             activeTab === 'seaLevelComparison'
-              ? 'bg-gradient-to-r from-cyan-600 to-teal-600 text-white shadow-lg shadow-cyan-950/50'
-              : 'bg-slate-900 text-slate-300 border border-slate-800 hover:bg-slate-800'
+              ? 'bg-gradient-to-r from-cyan-600 to-teal-600 text-white shadow-lg shadow-cyan-950/80 border border-cyan-300'
+              : 'bg-slate-900 text-slate-200 border border-slate-800 hover:bg-slate-800'
           }`}
         >
-          <Activity className="w-4 h-4 mr-1.5" />
+          <Activity className="w-4 h-4 mr-2" />
           Sea Level Rise (mm/yr)
         </button>
 
         <button
           onClick={() => setActiveTab('cycloneTimeline')}
-          className={`px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center transition-all cursor-pointer ${
+          className={`px-4 py-2.5 rounded-xl text-sm font-bold flex items-center transition-all cursor-pointer ${
             activeTab === 'cycloneTimeline'
-              ? 'bg-gradient-to-r from-rose-700 to-red-600 text-white shadow-lg shadow-rose-950/50'
-              : 'bg-slate-900 text-slate-300 border border-slate-800 hover:bg-slate-800'
+              ? 'bg-gradient-to-r from-rose-700 to-red-600 text-white shadow-lg shadow-rose-950/80 border border-rose-300'
+              : 'bg-slate-900 text-slate-200 border border-slate-800 hover:bg-slate-800'
           }`}
         >
-          <Wind className="w-4 h-4 mr-1.5" />
+          <Wind className="w-4 h-4 mr-2" />
           Cyclone History (2011–2023)
         </button>
       </div>
@@ -300,37 +300,37 @@ export function ClimateComparison({ locations, environmentalData, fsiMangroveTre
       </div>
 
       {/* Comparison Summary Data Table */}
-      <div className="glass-panel p-6 rounded-2xl border border-slate-800 space-y-4">
-        <h2 className="text-lg font-bold text-slate-100 flex items-center">
-          <ShieldCheck className="w-5 h-5 mr-2 text-emerald-400" />
-          Tamil Nadu 8 Mangrove Sanctuaries Baseline Comparison Matrix
+      <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-4 shadow-xl">
+        <h2 className="text-xl sm:text-2xl font-black text-white flex items-center">
+          <ShieldCheck className="w-6 h-6 mr-2 text-emerald-400" />
+          Tamil Nadu Coastal & Mangrove Sanctuaries Baseline Comparison Matrix ({locations.length} Sites)
         </h2>
 
         <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs text-slate-300">
-            <thead className="bg-slate-900 text-slate-400 font-mono text-[11px] uppercase border-b border-slate-800">
+          <table className="w-full text-left text-sm text-slate-200">
+            <thead className="bg-slate-900 text-slate-300 font-mono text-xs uppercase border-b border-slate-800">
               <tr>
-                <th className="py-3 px-4">Location Name</th>
-                <th className="py-3 px-4">District</th>
-                <th className="py-3 px-4">Category</th>
-                <th className="py-3 px-4">Max Temp (°C)</th>
-                <th className="py-3 px-4">Min Temp (°C)</th>
-                <th className="py-3 px-4">Annual Rainfall (mm)</th>
-                <th className="py-3 px-4">Shoreline Erosion (%)</th>
-                <th className="py-3 px-4">Sea Level Trend (mm/yr)</th>
+                <th className="py-3.5 px-4 font-bold">Location Name</th>
+                <th className="py-3.5 px-4 font-bold">District</th>
+                <th className="py-3.5 px-4 font-bold">Category</th>
+                <th className="py-3.5 px-4 font-bold">Max Temp (°C)</th>
+                <th className="py-3.5 px-4 font-bold">Min Temp (°C)</th>
+                <th className="py-3.5 px-4 font-bold">Annual Rainfall (mm)</th>
+                <th className="py-3.5 px-4 font-bold">Shoreline Erosion (%)</th>
+                <th className="py-3.5 px-4 font-bold">Sea Level Trend (mm/yr)</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-800/60 font-sans">
               {comparisonData.map((row, i) => (
-                <tr key={i} className="hover:bg-slate-900/50">
-                  <td className="py-3 px-4 font-bold text-slate-100">{row.name}</td>
-                  <td className="py-3 px-4 text-slate-300">{row.district}</td>
-                  <td className="py-3 px-4 font-mono text-emerald-400">{row.category}</td>
-                  <td className="py-3 px-4 font-mono text-rose-400 font-bold">{row.maxTemp ? `${row.maxTemp} °C` : 'Data unavailable'}</td>
-                  <td className="py-3 px-4 font-mono text-cyan-400 font-bold">{row.minTemp ? `${row.minTemp} °C` : 'Data unavailable'}</td>
-                  <td className="py-3 px-4 font-mono text-blue-400 font-bold">{row.rainfall ? `${row.rainfall} mm` : 'Data unavailable'}</td>
-                  <td className="py-3 px-4 font-mono text-amber-400 font-bold">{row.erosionPercent ? `${row.erosionPercent} %` : 'Data unavailable'}</td>
-                  <td className="py-3 px-4 font-mono text-teal-300 font-bold">{row.seaLevelMmYr ? `${row.seaLevelMmYr} mm/yr` : 'Data unavailable'}</td>
+                <tr key={i} className="hover:bg-slate-900/60">
+                  <td className="py-3.5 px-4 font-black text-white">{row.name}</td>
+                  <td className="py-3.5 px-4 text-slate-200 font-medium">{row.district}</td>
+                  <td className="py-3.5 px-4 font-mono text-emerald-300 font-semibold">{row.category}</td>
+                  <td className="py-3.5 px-4 font-mono text-rose-400 font-extrabold">{row.maxTemp ? `${row.maxTemp} °C` : 'Data unavailable'}</td>
+                  <td className="py-3.5 px-4 font-mono text-cyan-300 font-extrabold">{row.minTemp ? `${row.minTemp} °C` : 'Data unavailable'}</td>
+                  <td className="py-3.5 px-4 font-mono text-blue-300 font-extrabold">{row.rainfall ? `${row.rainfall} mm` : 'Data unavailable'}</td>
+                  <td className="py-3.5 px-4 font-mono text-amber-300 font-extrabold">{row.erosionPercent ? `${row.erosionPercent} %` : 'Data unavailable'}</td>
+                  <td className="py-3.5 px-4 font-mono text-teal-300 font-extrabold">{row.seaLevelMmYr ? `${row.seaLevelMmYr} mm/yr` : 'Data unavailable'}</td>
                 </tr>
               ))}
             </tbody>

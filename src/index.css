@@ -41,10 +41,24 @@
   animation: sunGlimmer 14s ease-in-out infinite 2s;
 }
 
+/* Base Typography & Projector High-Contrast Setup */
+html, body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
 /* Base Body Modes — Rich Contrast Marine Theme */
 body.dark {
   background-color: #031c17; /* Deep Mangrove Green/Navy base */
-  color: #f1f5f9;
+  color: #f8fafc;
   min-height: 100vh;
 }
 
@@ -54,19 +68,19 @@ body.light {
   min-height: 100vh;
 }
 
-/* Dark Mode Glass Panels — High-Contrast Glass floating over vibrant green background */
+/* Dark Mode Glass Panels — High-Contrast Glass floating over marine background */
 .dark .glass-panel {
-  background: rgba(6, 28, 32, 0.82);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(52, 211, 153, 0.35);
-  box-shadow: 0 16px 48px 0 rgba(1, 15, 18, 0.6);
+  background: rgba(3, 20, 24, 0.94);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(52, 211, 153, 0.45);
+  box-shadow: 0 16px 48px 0 rgba(1, 15, 18, 0.85);
 }
 
 .dark .glass-panel-hover:hover {
-  background: rgba(10, 42, 48, 0.92);
-  border-color: rgba(52, 211, 153, 0.6);
-  box-shadow: 0 20px 56px 0 rgba(4, 30, 35, 0.7);
+  background: rgba(6, 32, 38, 0.98);
+  border-color: rgba(52, 211, 153, 0.7);
+  box-shadow: 0 20px 56px 0 rgba(4, 30, 35, 0.85);
 }
 
 /* Stunning Interactive Card Hover Glow & Soft Lift Effect */

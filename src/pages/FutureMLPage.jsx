@@ -230,49 +230,51 @@ export function FutureMLPage({ mlSchema }) {
       <NDVISatelliteViewer />
 
       {/* 12 Sanctuary Base Risk Cards Grid - Enlarged Fonts */}
-      <div className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-xl font-extrabold text-slate-100 flex items-center">
-            <Sparkles className="w-6 h-6 mr-2 text-cyan-400" />
+      <div className="space-y-5">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <h2 className="text-2xl sm:text-3xl font-black text-white flex items-center">
+            <Sparkles className="w-7 h-7 mr-2.5 text-cyan-400" />
             Predicted Site Risk & Carbon Stock Valuation ({tnfdData.length} Sanctuaries)
           </h2>
-          <span className="text-xs sm:text-sm font-mono text-slate-300 font-semibold">Model Output Baseline (2025)</span>
+          <span className="text-xs sm:text-sm font-mono text-emerald-300 font-bold bg-slate-950/80 px-3.5 py-1.5 rounded-xl border border-slate-800">
+            Model Output Baseline (2025)
+          </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {tnfdData.map(site => {
             const vuln = site.baseVulnerabilityScore;
             let status = 'Low Risk';
-            let badgeStyle = 'bg-emerald-950 text-emerald-200 border-emerald-600/60 font-bold';
+            let badgeStyle = 'bg-emerald-950 text-emerald-200 border-emerald-600 font-bold';
             if (vuln >= 65) {
               status = 'Severe Threat';
-              badgeStyle = 'bg-rose-950 text-rose-200 border-rose-600/60 font-bold';
+              badgeStyle = 'bg-rose-950 text-rose-200 border-rose-600 font-bold';
             } else if (vuln >= 45) {
               status = 'High Risk';
-              badgeStyle = 'bg-amber-950 text-amber-200 border-amber-600/60 font-bold';
+              badgeStyle = 'bg-amber-950 text-amber-200 border-amber-600 font-bold';
             } else if (vuln >= 35) {
               status = 'Moderate';
-              badgeStyle = 'bg-cyan-950 text-cyan-200 border-cyan-600/60 font-bold';
+              badgeStyle = 'bg-cyan-950 text-cyan-200 border-cyan-600 font-bold';
             }
 
             return (
-              <div key={site.id} className="glass-panel glass-panel-glow p-5 sm:p-6 rounded-2xl border border-slate-800 space-y-4 flex flex-col justify-between cursor-pointer">
+              <div key={site.id} className="glass-panel glass-panel-glow p-6 sm:p-7 rounded-2xl border border-slate-800 space-y-4 flex flex-col justify-between cursor-pointer shadow-xl">
                 <div>
-                  <div className="flex items-center justify-between mb-1.5 gap-2">
-                    <span className="text-base sm:text-lg font-extrabold text-slate-100">{site.siteName}</span>
-                    <span className={`text-xs font-mono px-2.5 py-1 rounded-lg border shrink-0 ${badgeStyle}`}>
+                  <div className="flex items-center justify-between mb-2 gap-2">
+                    <span className="text-lg sm:text-xl font-black text-white">{site.siteName}</span>
+                    <span className={`text-xs font-mono px-3 py-1.5 rounded-xl border shrink-0 ${badgeStyle}`}>
                       {status}
                     </span>
                   </div>
-                  <div className="text-xs text-slate-300 font-mono font-semibold">{site.district} District</div>
+                  <div className="text-xs sm:text-sm text-slate-300 font-mono font-bold">{site.district} District</div>
                 </div>
 
-                <div className="space-y-1.5">
-                  <div className="flex justify-between text-sm font-mono">
-                    <span className="text-slate-300 font-semibold">Vulnerability Index:</span>
-                    <span className="font-extrabold text-cyan-400 text-base">{vuln}%</span>
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center text-sm font-mono">
+                    <span className="text-slate-200 font-bold">Vulnerability Index:</span>
+                    <span className="font-black text-cyan-300 text-lg sm:text-xl">{vuln}%</span>
                   </div>
-                  <div className="w-full h-3 bg-slate-950 rounded-full overflow-hidden border border-slate-800">
+                  <div className="w-full h-3.5 bg-slate-950 rounded-full overflow-hidden border border-slate-800">
                     <div 
                       className={`h-full rounded-full ${
                         vuln >= 65 ? 'bg-gradient-to-r from-amber-500 to-rose-500' :
@@ -284,17 +286,17 @@ export function FutureMLPage({ mlSchema }) {
                   </div>
                 </div>
 
-                <div className="pt-3 border-t border-slate-800 text-xs text-slate-300 space-y-1.5">
+                <div className="pt-3 border-t border-slate-800 text-xs sm:text-sm text-slate-200 space-y-2">
                   <div className="flex justify-between font-mono">
-                    <span>FSI Canopy (2023):</span>
-                    <span className="text-slate-100 font-bold">{site.fsiCanopyCover2023_ha} ha</span>
+                    <span className="text-slate-300">FSI Canopy (2023):</span>
+                    <span className="text-white font-bold">{site.fsiCanopyCover2023_ha} ha</span>
                   </div>
                   <div className="flex justify-between font-mono">
-                    <span>Erosion Rate:</span>
+                    <span className="text-slate-300">Erosion Rate:</span>
                     <span className="text-rose-400 font-bold">{site.shorelineErosionRate_m_yr} m/yr</span>
                   </div>
-                  <div className="text-xs text-slate-400 leading-snug pt-1.5 border-t border-slate-800/60">
-                    <strong className="text-slate-200">Primary Driver:</strong> {site.primaryThreatDriver}
+                  <div className="text-xs sm:text-sm text-slate-200 leading-relaxed pt-2 border-t border-slate-800/60 font-normal">
+                    <strong className="text-emerald-300 font-bold">Primary Driver:</strong> {site.primaryThreatDriver}
                   </div>
                 </div>
               </div>
@@ -304,45 +306,45 @@ export function FutureMLPage({ mlSchema }) {
       </div>
 
       {/* 5-Year & 10-Year Canopy Trajectory Forecasting Section */}
-      <div className="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-6">
+      <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-6 shadow-xl">
         <div className="flex items-center justify-between border-b border-slate-800 pb-4">
           <div>
             <div className="flex items-center space-x-2 text-indigo-400 font-mono text-sm mb-1 font-bold">
               <TrendingUp className="w-5 h-5 text-indigo-400" />
               <span>Ridge & Polynomial Regression Engine</span>
             </div>
-            <h2 className="text-xl sm:text-2xl font-extrabold text-slate-100">
+            <h2 className="text-2xl sm:text-3xl font-black text-white">
               5-Year & 10-Year Mangrove Canopy Trajectory Forecasting (2025–2035)
             </h2>
-            <p className="text-sm text-slate-300 mt-1">
+            <p className="text-sm sm:text-base text-slate-200 mt-1.5 font-medium">
               Polynomial growth trajectory projections based on FSI ISFR biennial cycles (2013-2023) comparing business-as-usual vs. active TN-SHORE afforestation.
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 font-mono">
-          <div className="bg-slate-950/80 glass-panel-glow p-5 rounded-2xl border border-slate-800 space-y-2 cursor-pointer">
-            <div className="text-slate-400 text-xs font-semibold uppercase">Statewide Canopy (2023 Actual)</div>
-            <div className="text-2xl sm:text-3xl font-extrabold text-emerald-400">28,538.60 ha</div>
-            <div className="text-xs text-slate-400 font-semibold">Official FSI ISFR 2023 Census</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 font-mono">
+          <div className="bg-slate-950/80 glass-panel-glow p-6 rounded-2xl border border-slate-800 space-y-2.5 cursor-pointer shadow-lg">
+            <div className="text-slate-300 text-xs sm:text-sm font-bold uppercase tracking-wide">Statewide Canopy (2023 Actual)</div>
+            <div className="text-3xl sm:text-4xl font-black text-emerald-400">28,538.60 ha</div>
+            <div className="text-xs sm:text-sm text-slate-300 font-semibold">Official FSI ISFR 2023 Census</div>
           </div>
 
-          <div className="bg-slate-950/80 glass-panel-glow p-5 rounded-2xl border border-slate-800 space-y-2 cursor-pointer">
-            <div className="text-slate-400 text-xs font-semibold uppercase">2027 Projected (No Action)</div>
-            <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">27,810.00 ha</div>
-            <div className="text-xs text-rose-400 font-extrabold">-2.55% Loss (Erosion & Stress)</div>
+          <div className="bg-slate-950/80 glass-panel-glow p-6 rounded-2xl border border-slate-800 space-y-2.5 cursor-pointer shadow-lg">
+            <div className="text-slate-300 text-xs sm:text-sm font-bold uppercase tracking-wide">2027 Projected (No Action)</div>
+            <div className="text-3xl sm:text-4xl font-black text-amber-400">27,810.00 ha</div>
+            <div className="text-xs sm:text-sm text-rose-400 font-black">-2.55% Loss (Erosion & Stress)</div>
           </div>
 
-          <div className="bg-slate-950/80 glass-panel-glow p-5 rounded-2xl border border-slate-800 space-y-2 cursor-pointer">
-            <div className="text-slate-400 text-xs font-semibold uppercase">2027 Projected (TN-SHORE Active)</div>
-            <div className="text-2xl sm:text-3xl font-extrabold text-cyan-400">29,450.00 ha</div>
-            <div className="text-xs text-emerald-400 font-extrabold">+3.19% Gain (Canalization)</div>
+          <div className="bg-slate-950/80 glass-panel-glow p-6 rounded-2xl border border-slate-800 space-y-2.5 cursor-pointer shadow-lg">
+            <div className="text-slate-300 text-xs sm:text-sm font-bold uppercase tracking-wide">2027 Projected (TN-SHORE Active)</div>
+            <div className="text-3xl sm:text-4xl font-black text-cyan-400">29,450.00 ha</div>
+            <div className="text-xs sm:text-sm text-emerald-400 font-black">+3.19% Gain (Canalization)</div>
           </div>
 
-          <div className="bg-slate-950/80 glass-panel-glow p-5 rounded-2xl border border-slate-800 space-y-2 cursor-pointer">
-            <div className="text-slate-400 text-xs font-semibold uppercase">2035 Target (MISHTI Horizon)</div>
-            <div className="text-2xl sm:text-3xl font-extrabold text-indigo-400">31,200.00 ha</div>
-            <div className="text-xs text-slate-300 font-semibold">+9.32% Target Resilience</div>
+          <div className="bg-slate-950/80 glass-panel-glow p-6 rounded-2xl border border-slate-800 space-y-2.5 cursor-pointer shadow-lg">
+            <div className="text-slate-300 text-xs sm:text-sm font-bold uppercase tracking-wide">2035 Target (MISHTI Horizon)</div>
+            <div className="text-3xl sm:text-4xl font-black text-indigo-400">31,200.00 ha</div>
+            <div className="text-xs sm:text-sm text-slate-200 font-bold">+9.32% Target Resilience</div>
           </div>
         </div>
 

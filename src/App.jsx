@@ -77,19 +77,19 @@ export default function App() {
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         {/* High-Contrast Vivid Lush Mangrove Lagoon Photo */}
         <div
-          className="absolute inset-0 bg-cover bg-center animate-vibrant-pan filter brightness-115 saturate-180 opacity-65 dark:opacity-75 light:opacity-40 transition-all duration-700"
+          className="absolute inset-0 bg-cover bg-center animate-vibrant-pan filter brightness-105 saturate-150 opacity-40 dark:opacity-35 light:opacity-30 transition-all duration-700"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=2000&q=80')`
           }}
         />
 
         {/* Tropical Sunlit Emerald Glass Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#022c22]/40 via-[#064e3b]/25 to-[#01140e]/60 dark:from-[#022c22]/40 dark:via-[#064e3b]/25 dark:to-[#01140e]/60 light:from-[#f0fdf4]/80 light:via-[#d1fae5]/70 light:to-[#f0fdf4]/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#021d17]/85 via-[#032a21]/80 to-[#01140e]/90 dark:from-[#021d17]/85 dark:via-[#032a21]/80 dark:to-[#01140e]/90 light:from-[#f0fdf4]/85 light:via-[#d1fae5]/75 light:to-[#f0fdf4]/90" />
 
         {/* Vibrant Floating Sun Glimmer & Emerald Water Light Blobs */}
-        <div className="absolute top-10 left-1/4 w-[32rem] h-[32rem] bg-amber-400/30 dark:bg-amber-400/35 light:bg-amber-300/25 rounded-full blur-3xl animate-sun-glimmer pointer-events-none" />
-        <div className="absolute bottom-20 right-1/4 w-[36rem] h-[36rem] bg-emerald-400/35 dark:bg-emerald-400/40 light:bg-emerald-300/30 rounded-full blur-3xl animate-emerald-pulse pointer-events-none" />
-        <div className="absolute top-1/2 left-10 w-96 h-96 bg-cyan-400/30 dark:bg-cyan-400/35 light:bg-cyan-300/25 rounded-full blur-3xl animate-sun-glimmer pointer-events-none" />
+        <div className="absolute top-10 left-1/4 w-[32rem] h-[32rem] bg-amber-400/20 dark:bg-amber-400/20 light:bg-amber-300/20 rounded-full blur-3xl animate-sun-glimmer pointer-events-none" />
+        <div className="absolute bottom-20 right-1/4 w-[36rem] h-[36rem] bg-emerald-400/25 dark:bg-emerald-400/25 light:bg-emerald-300/20 rounded-full blur-3xl animate-emerald-pulse pointer-events-none" />
+        <div className="absolute top-1/2 left-10 w-96 h-96 bg-cyan-400/20 dark:bg-cyan-400/20 light:bg-cyan-300/20 rounded-full blur-3xl animate-sun-glimmer pointer-events-none" />
       </div>
 
       {/* Main App Content Wrapper */}
@@ -109,8 +109,8 @@ export default function App() {
           onToggleTheme={toggleTheme}
         />
 
-        {/* Main Content View */}
-        <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main Content View with Expanded 1600px Width for Projector Presentation */}
+        <main className="flex-1 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-6">
           {loading ? (
             <div className="py-20 text-center space-y-3">
               <div className="w-10 h-10 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin mx-auto" />

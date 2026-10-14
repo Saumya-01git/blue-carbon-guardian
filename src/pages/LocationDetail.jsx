@@ -69,37 +69,37 @@ export function LocationDetail({ location, records, fsiLocationTrends, locationC
       </div>
 
       {/* Quick Information Cards */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div className="glass-panel p-4 rounded-xl border border-slate-800">
-          <div className="text-[11px] text-slate-400 font-medium">Latitude / Longitude</div>
-          <div className="text-sm font-bold text-slate-100 mt-1 font-mono">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="glass-panel p-5 sm:p-6 rounded-2xl border border-slate-800 shadow-lg">
+          <div className="text-xs sm:text-sm text-slate-300 font-bold">Latitude / Longitude</div>
+          <div className="text-base sm:text-lg font-black text-white mt-1 font-mono">
             {location.lat}°N, {location.lng}°E
           </div>
-          <div className="text-[10px] text-emerald-400 mt-1 font-mono">Official Site Boundary</div>
+          <div className="text-xs text-emerald-300 mt-1 font-mono font-semibold">Official Site Boundary</div>
         </div>
 
-        <div className="glass-panel p-4 rounded-xl border border-slate-800">
-          <div className="text-[11px] text-slate-400 font-medium">District & Region</div>
-          <div className="text-sm font-bold text-slate-100 mt-1">
+        <div className="glass-panel p-5 sm:p-6 rounded-2xl border border-slate-800 shadow-lg">
+          <div className="text-xs sm:text-sm text-slate-300 font-bold">District & Region</div>
+          <div className="text-base sm:text-lg font-black text-white mt-1">
             {location.district}
           </div>
-          <div className="text-[10px] text-slate-400 mt-1 truncate">{location.region}</div>
+          <div className="text-xs text-slate-300 mt-1 truncate">{location.region}</div>
         </div>
 
-        <div className="glass-panel p-4 rounded-xl border border-slate-800">
-          <div className="text-[11px] text-slate-400 font-medium">Ecosystem Category</div>
-          <div className="text-sm font-bold text-emerald-400 mt-1">
+        <div className="glass-panel p-5 sm:p-6 rounded-2xl border border-slate-800 shadow-lg">
+          <div className="text-xs sm:text-sm text-slate-300 font-bold">Ecosystem Category</div>
+          <div className="text-base sm:text-lg font-black text-emerald-300 mt-1">
             {location.ecosystemCategory}
           </div>
-          <div className="text-[10px] text-slate-400 mt-1">{location.ecosystemType}</div>
+          <div className="text-xs text-slate-300 mt-1">{location.ecosystemType}</div>
         </div>
 
-        <div className="glass-panel p-4 rounded-xl border border-slate-800">
-          <div className="text-[11px] text-slate-400 font-medium">Sea Level Rise Baseline</div>
-          <div className="text-xs font-semibold text-cyan-300 mt-1 font-mono">
+        <div className="glass-panel p-5 sm:p-6 rounded-2xl border border-slate-800 shadow-lg">
+          <div className="text-xs sm:text-sm text-slate-300 font-bold">Sea Level Rise Baseline</div>
+          <div className="text-base sm:text-lg font-black text-cyan-300 mt-1 font-mono">
             {location.seaLevelRiseRate || "1.25 mm/yr (INCOIS)"}
           </div>
-          <div className="text-[10px] text-slate-400 mt-1">INCOIS Tide Gauge Baseline</div>
+          <div className="text-xs text-slate-300 mt-1">INCOIS Tide Gauge Baseline</div>
         </div>
       </div>
 

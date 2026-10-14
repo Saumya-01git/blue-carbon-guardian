@@ -154,7 +154,7 @@ export function downloadAcademicPDFDossier(sitesData, mlEngineData) {
         </tbody>
       </table>
 
-      <h2>2. 8 Coastal Sanctuary Master Dataset Profile (Tamil Nadu)</h2>
+      <h2>2. ${(sitesData || []).length || 12} Coastal Sanctuary Master Dataset Profile (Tamil Nadu)</h2>
       <table>
         <thead>
           <tr>

@@ -166,8 +166,8 @@ export function ClimateComparison({ locations, environmentalData, fsiMangroveTre
             {activeTab === 'mangroveFsi' && 'Statewide Tamil Nadu Mangrove Cover Evolution Across FSI Assessment Cycles (2013–2023)'}
             {activeTab === 'canopyDensity' && 'Forest Survey of India (FSI ISFR 2023) Mangrove Canopy Density Classification (ha)'}
             {activeTab === 'degradationDrivers' && 'Primary Drivers of Mangrove Forest Degradation & Loss in Tamil Nadu Coastal Sanctuaries (%)'}
-            {activeTab === 'tempComparison' && 'Daily Minimum vs Maximum Climatological Temperature (°C) across 8 Locations'}
-            {activeTab === 'rainfallComparison' && 'Annual Climatological Rainfall Normal (mm) across 8 Locations'}
+            {activeTab === 'tempComparison' && `Daily Minimum vs Maximum Climatological Temperature (°C) across ${locations.length} Locations`}
+            {activeTab === 'rainfallComparison' && `Annual Climatological Rainfall Normal (mm) across ${locations.length} Locations`}
             {activeTab === 'erosionComparison' && 'NCCR Shoreline High Erosion Sector Percentage (%) across Coastal Locations'}
             {activeTab === 'seaLevelComparison' && 'INCOIS Multi-Decadal Tide Gauge Sea Level Change Rate (mm/year)'}
             {activeTab === 'cycloneTimeline' && 'IMD Official Cyclonic Landfalls Affecting Tamil Nadu Coastal Sanctuaries (2011–2023)'}

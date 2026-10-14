@@ -14,7 +14,7 @@ export function Navbar({ activeTab, setActiveTab, user, onOpenAuth, onLogout, th
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-slate-950/95 dark:bg-slate-950/95 light:bg-white/95 backdrop-blur-md border-b border-slate-800 light:border-slate-200 shadow-xl">
+    <header className="sticky top-0 z-50 bg-[#071318] dark:bg-[#071318] light:bg-white border-b border-[#1a3542] light:border-slate-200 shadow-xl">
       <div className="w-full max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 gap-3">
           {/* Brand Logo */}

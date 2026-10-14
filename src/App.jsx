@@ -73,23 +73,13 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col font-sans transition-colors duration-200 relative overflow-x-hidden">
-      {/* VIBRANT HIGH-CONTRAST TAMIL NADU MANGROVE & TROPICAL COASTAL BACKGROUND */}
+      {/* SOLID HIGH-CONTRAST PRESENTATION CANVAS (Zero muddy translucency, optimized for projectors) */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        {/* High-Contrast Vivid Lush Mangrove Lagoon Photo */}
-        <div
-          className="absolute inset-0 bg-cover bg-center animate-vibrant-pan filter brightness-105 saturate-150 opacity-40 dark:opacity-35 light:opacity-30 transition-all duration-700"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=2000&q=80')`
-          }}
-        />
+        {/* Solid Deep Dark Canvas */}
+        <div className="absolute inset-0 bg-[#040d12] dark:bg-[#040d12] light:bg-[#f8fafc]" />
 
-        {/* Tropical Sunlit Emerald Glass Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#021d17]/85 via-[#032a21]/80 to-[#01140e]/90 dark:from-[#021d17]/85 dark:via-[#032a21]/80 dark:to-[#01140e]/90 light:from-[#f0fdf4]/85 light:via-[#d1fae5]/75 light:to-[#f0fdf4]/90" />
-
-        {/* Vibrant Floating Sun Glimmer & Emerald Water Light Blobs */}
-        <div className="absolute top-10 left-1/4 w-[32rem] h-[32rem] bg-amber-400/20 dark:bg-amber-400/20 light:bg-amber-300/20 rounded-full blur-3xl animate-sun-glimmer pointer-events-none" />
-        <div className="absolute bottom-20 right-1/4 w-[36rem] h-[36rem] bg-emerald-400/25 dark:bg-emerald-400/25 light:bg-emerald-300/20 rounded-full blur-3xl animate-emerald-pulse pointer-events-none" />
-        <div className="absolute top-1/2 left-10 w-96 h-96 bg-cyan-400/20 dark:bg-cyan-400/20 light:bg-cyan-300/20 rounded-full blur-3xl animate-sun-glimmer pointer-events-none" />
+        {/* Crisp Top Ambient Vignette (No noisy photos, no moving fish) */}
+        <div className="absolute top-0 left-0 right-0 h-96 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-950/20 via-transparent to-transparent dark:from-emerald-950/20 dark:via-transparent light:from-slate-200/40 light:via-transparent" />
       </div>
 
       {/* Main App Content Wrapper */}

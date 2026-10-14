@@ -55,45 +55,45 @@ code, pre, .font-mono {
   font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
-/* Base Body Modes — Rich Contrast Marine Theme */
+/* Base Body Modes — Solid High-Contrast Canvas for Projectors & Displays */
 body.dark {
-  background-color: #031c17; /* Deep Mangrove Green/Navy base */
+  background-color: #040d12; /* Deep solid obsidian-marine canvas */
   color: #f8fafc;
   min-height: 100vh;
 }
 
 body.light {
-  background-color: #f0fdf4;
-  color: #065f46;
+  background-color: #f8fafc;
+  color: #0f172a;
   min-height: 100vh;
 }
 
-/* Dark Mode Glass Panels — High-Contrast Glass floating over marine background */
+/* Dark Mode Panels — 100% SOLID OPAQUE for Maximum Projector Legibility */
 .dark .glass-panel {
-  background: rgba(3, 20, 24, 0.94);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(52, 211, 153, 0.45);
-  box-shadow: 0 16px 48px 0 rgba(1, 15, 18, 0.85);
+  background-color: #0b171e !important;
+  border: 1px solid #1a3542 !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.75) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
 .dark .glass-panel-hover:hover {
-  background: rgba(6, 32, 38, 0.98);
-  border-color: rgba(52, 211, 153, 0.7);
-  box-shadow: 0 20px 56px 0 rgba(4, 30, 35, 0.85);
+  background-color: #10222b !important;
+  border-color: #10b981 !important;
+  box-shadow: 0 16px 44px 0 rgba(0, 0, 0, 0.9) !important;
 }
 
 /* Stunning Interactive Card Hover Glow & Soft Lift Effect */
 .glass-panel-glow {
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s ease, box-shadow 0.35s ease, background-color 0.3s ease;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
   will-change: transform, box-shadow;
 }
 
 .glass-panel-glow:hover {
-  transform: translateY(-6px) scale(1.015);
-  border-color: rgba(52, 211, 153, 0.8) !important;
-  box-shadow: 0 20px 40px -6px rgba(16, 185, 129, 0.35), 0 0 25px 3px rgba(6, 182, 212, 0.3) !important;
-  background: rgba(8, 40, 45, 0.92) !important;
+  transform: translateY(-4px) scale(1.01);
+  border-color: #34d399 !important;
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.8), 0 0 15px rgba(52, 211, 153, 0.3) !important;
+  background-color: #10242e !important;
 }
 
 .light .glass-panel-glow:hover {

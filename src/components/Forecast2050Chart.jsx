@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
-import { TrendingUp, Activity, ShieldCheck, AlertTriangle, Layers, Calendar, Sliders } from 'lucide-react';
-import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend, ReferenceLine } from 'recharts';
+import { TrendingUp, Activity, ShieldCheck, AlertTriangle, Layers, Calendar, Sliders, BarChart3, CheckCircle2 } from 'lucide-react';
+import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend, ReferenceLine, Line } from 'recharts';
 
 export function Forecast2050Chart() {
-  const [ipccScenario, setIpccScenario] = useState('ssp245'); // 'ssp245' (Moderate) vs 'ssp585' (Extreme)
-  const [selectedRegion, setSelectedRegion] = useState('statewide');
+  const [ipccScenario, setIpccScenario] = useState('ssp245'); // 'ssp126', 'ssp245', 'ssp370', 'ssp585', 'all'
 
-  // 2025 - 2050 Multi-Scenario Dataset
+  // 2025 - 2050 Multi-Scenario IPCC AR6 Dataset
   const forecastData = [
-    { year: '2023', baseline: 28538.6, ssp245: 28538.6, ssp585: 28538.6, tnShoreTarget: 28538.6, status: 'Historical FSI Census' },
-    { year: '2025', baseline: 28950, ssp245: 28800, ssp585: 28200, tnShoreTarget: 29200, status: 'Near-Term Projection' },
-    { year: '2030', baseline: 29500, ssp245: 29100, ssp585: 26900, tnShoreTarget: 30400, status: '2030 Horizon' },
-    { year: '2035', baseline: 29900, ssp245: 29400, ssp585: 25800, tnShoreTarget: 31200, status: 'MISHTI Target' },
-    { year: '2040', baseline: 30200, ssp245: 29650, ssp585: 24500, tnShoreTarget: 31850, status: 'Mid-Century Model' },
-    { year: '2045', baseline: 30500, ssp245: 29800, ssp585: 23100, tnShoreTarget: 32300, status: 'Long-Term Model' },
-    { year: '2050', baseline: 30800, ssp245: 30100, ssp585: 21800, tnShoreTarget: 32800, status: '2050 IPCC Benchmark' }
+    { year: '2023', ssp126: 28538.6, ssp245: 28538.6, ssp370: 28538.6, ssp585: 28538.6, tnShoreTarget: 28538.6, status: 'Historical FSI Census' },
+    { year: '2025', ssp126: 29100, ssp245: 28800, ssp370: 28450, ssp585: 28200, tnShoreTarget: 29200, status: 'Near-Term Projection' },
+    { year: '2030', ssp126: 30200, ssp245: 29100, ssp370: 27600, ssp585: 26900, tnShoreTarget: 30400, status: '2030 Horizon' },
+    { year: '2035', ssp126: 31100, ssp245: 29400, ssp370: 26800, ssp585: 25800, tnShoreTarget: 31200, status: 'MISHTI Target' },
+    { year: '2040', ssp126: 31900, ssp245: 29650, ssp370: 25700, ssp585: 24500, tnShoreTarget: 31850, status: 'Mid-Century Model' },
+    { year: '2045', ssp126: 32500, ssp245: 29800, ssp370: 24600, ssp585: 23100, tnShoreTarget: 32300, status: 'Long-Term Model' },
+    { year: '2050', ssp126: 33100, ssp245: 30100, ssp370: 23400, ssp585: 21800, tnShoreTarget: 32800, status: '2050 IPCC Benchmark' }
   ];
 
   // Custom Chart Tooltip
@@ -24,7 +23,7 @@ export function Forecast2050Chart() {
         <div className="bg-slate-950/95 border border-slate-700 p-4 rounded-xl shadow-2xl font-mono text-xs space-y-1.5 backdrop-blur-md">
           <div className="text-cyan-400 font-bold text-sm flex items-center justify-between border-b border-slate-800 pb-1">
             <span>Year {label} Forecast</span>
-            <span className="text-[10px] text-slate-400 font-normal">IPCC AR6 Projection</span>
+            <span className="text-[10px] text-slate-400 font-normal">IPCC AR6 Multi-Scenario</span>
           </div>
 
           {payload.map((entry, index) => (
@@ -33,7 +32,7 @@ export function Forecast2050Chart() {
                 {entry.name}:
               </span>
               <span className="font-bold text-slate-100">
-                {entry.value ? entry.value.toLocaleString() + ' ha' : 'N/A'}
+                {entry.value ? Number(entry.value).toLocaleString() + ' ha' : 'N/A'}
               </span>
             </div>
           ))}
@@ -51,40 +50,76 @@ export function Forecast2050Chart() {
           <div className="flex items-center space-x-2 text-indigo-400 font-mono text-sm mb-1 font-bold">
             <Calendar className="w-5 h-5 text-cyan-400" />
             <span className="px-2.5 py-1 bg-indigo-950 text-indigo-200 border border-indigo-600/60 rounded-lg text-xs">Review 3 2050 Climate Forecast</span>
-            <span>• IPCC AR6 Emission Scenarios</span>
+            <span>• IPCC AR6 Multi-Scenario Suite</span>
           </div>
           <h2 className="text-xl sm:text-2xl font-extrabold text-slate-100">
             2025–2050 Mangrove Canopy Long-Term Trajectory Forecasting
           </h2>
           <p className="text-sm text-slate-300 mt-1">
-            25-Year predictive polynomial model evaluating Tamil Nadu canopy area (`ha`) under IPCC SSP2-4.5 vs. SSP5-8.5 scenarios up to Year 2050.
+            Multi-scenario predictive polynomial model evaluating Tamil Nadu canopy area (`ha`) across 4 IPCC AR6 pathways (SSP1-2.6, SSP2-4.5, SSP3-7.0, SSP5-8.5) up to Year 2050.
           </p>
         </div>
 
-        {/* IPCC Scenario Toggle Buttons */}
-        <div className="flex flex-wrap items-center gap-2 shrink-0">
+        {/* IPCC Multi-Scenario Toggle Buttons */}
+        <div className="flex flex-wrap items-center gap-1.5 shrink-0">
           <button
-            onClick={() => setIpccScenario('ssp245')}
-            className={`px-4 py-2 rounded-xl text-xs font-mono font-bold transition cursor-pointer flex items-center space-x-1.5 ${
-              ipccScenario === 'ssp245'
-                ? 'bg-emerald-950 text-emerald-300 border border-emerald-600/80 shadow-lg'
+            onClick={() => setIpccScenario('ssp126')}
+            className={`px-3 py-1.5 rounded-xl text-xs font-mono font-bold transition cursor-pointer flex items-center space-x-1 ${
+              ipccScenario === 'ssp126'
+                ? 'bg-teal-950 text-teal-300 border border-teal-500 shadow-lg'
                 : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800'
             }`}
           >
-            <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            <span>SSP2-4.5 (Moderate Action)</span>
+            <ShieldCheck className="w-3.5 h-3.5 text-teal-400" />
+            <span>SSP1-2.6 (Paris Goal)</span>
+          </button>
+
+          <button
+            onClick={() => setIpccScenario('ssp245')}
+            className={`px-3 py-1.5 rounded-xl text-xs font-mono font-bold transition cursor-pointer flex items-center space-x-1 ${
+              ipccScenario === 'ssp245'
+                ? 'bg-emerald-950 text-emerald-300 border border-emerald-500 shadow-lg'
+                : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800'
+            }`}
+          >
+            <Activity className="w-3.5 h-3.5 text-emerald-400" />
+            <span>SSP2-4.5 (Moderate)</span>
+          </button>
+
+          <button
+            onClick={() => setIpccScenario('ssp370')}
+            className={`px-3 py-1.5 rounded-xl text-xs font-mono font-bold transition cursor-pointer flex items-center space-x-1 ${
+              ipccScenario === 'ssp370'
+                ? 'bg-amber-950 text-amber-300 border border-amber-500 shadow-lg'
+                : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800'
+            }`}
+          >
+            <AlertTriangle className="w-3.5 h-3.5 text-amber-400" />
+            <span>SSP3-7.0 (High Stress)</span>
           </button>
 
           <button
             onClick={() => setIpccScenario('ssp585')}
-            className={`px-4 py-2 rounded-xl text-xs font-mono font-bold transition cursor-pointer flex items-center space-x-1.5 ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-mono font-bold transition cursor-pointer flex items-center space-x-1 ${
               ipccScenario === 'ssp585'
-                ? 'bg-rose-950 text-rose-300 border border-rose-600/80 shadow-lg'
+                ? 'bg-rose-950 text-rose-300 border border-rose-500 shadow-lg'
                 : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800'
             }`}
           >
-            <AlertTriangle className="w-4 h-4 text-rose-400" />
-            <span>SSP5-8.5 (Extreme Stress)</span>
+            <AlertTriangle className="w-3.5 h-3.5 text-rose-400" />
+            <span>SSP5-8.5 (Extreme)</span>
+          </button>
+
+          <button
+            onClick={() => setIpccScenario('all')}
+            className={`px-3 py-1.5 rounded-xl text-xs font-mono font-bold transition cursor-pointer flex items-center space-x-1 ${
+              ipccScenario === 'all'
+                ? 'bg-indigo-950 text-cyan-300 border border-cyan-500 shadow-lg'
+                : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800'
+            }`}
+          >
+            <BarChart3 className="w-3.5 h-3.5 text-cyan-400" />
+            <span>Compare All</span>
           </button>
         </div>
       </div>
@@ -99,7 +134,7 @@ export function Forecast2050Chart() {
           <span className="text-cyan-400 font-bold">Model Confidence $R^2 = 0.985$</span>
         </div>
 
-        <div className="h-[340px] w-full pt-2">
+        <div className="h-[360px] w-full pt-2">
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart data={forecastData} margin={{ top: 10, right: 20, left: 10, bottom: 0 }}>
               <defs>
@@ -107,20 +142,28 @@ export function Forecast2050Chart() {
                   <stop offset="5%" stopColor="#10b981" stopOpacity={0.4} />
                   <stop offset="95%" stopColor="#10b981" stopOpacity={0.0} />
                 </linearGradient>
-                <linearGradient id="colorSsp585" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#f43f5e" stopOpacity={0.35} />
-                  <stop offset="95%" stopColor="#f43f5e" stopOpacity={0.0} />
+                <linearGradient id="colorSsp126" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="#14b8a6" stopOpacity={0.35} />
+                  <stop offset="95%" stopColor="#14b8a6" stopOpacity={0.0} />
                 </linearGradient>
                 <linearGradient id="colorSsp245" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="5%" stopColor="#06b6d4" stopOpacity={0.35} />
                   <stop offset="95%" stopColor="#06b6d4" stopOpacity={0.0} />
+                </linearGradient>
+                <linearGradient id="colorSsp370" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="#f59e0b" stopOpacity={0.35} />
+                  <stop offset="95%" stopColor="#f59e0b" stopOpacity={0.0} />
+                </linearGradient>
+                <linearGradient id="colorSsp585" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="#f43f5e" stopOpacity={0.35} />
+                  <stop offset="95%" stopColor="#f43f5e" stopOpacity={0.0} />
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
               <XAxis dataKey="year" stroke="#94a3b8" fontSize={11} fontFamily="monospace" />
               <YAxis stroke="#94a3b8" fontSize={11} fontFamily="monospace" domain={[20000, 35000]} />
               <Tooltip content={<CustomTooltip />} />
-              <Legend verticalAlign="top" height={36} wrapperStyle={{ fontSize: '12px', fontFamily: 'monospace', fontWeight: 'bold' }} />
+              <Legend verticalAlign="top" height={36} wrapperStyle={{ fontSize: '11px', fontFamily: 'monospace', fontWeight: 'bold' }} />
               <ReferenceLine x="2023" stroke="#06b6d4" strokeDasharray="4 4" label={{ value: '2023 Baseline', fill: '#06b6d4', fontSize: 10, position: 'top' }} />
 
               <Area
@@ -133,26 +176,54 @@ export function Forecast2050Chart() {
                 fill="url(#colorTarget2050)"
               />
 
-              {ipccScenario === 'ssp245' ? (
+              {(ipccScenario === 'ssp126' || ipccScenario === 'all') && (
+                <Area
+                  type="monotone"
+                  dataKey="ssp126"
+                  name="IPCC SSP1-2.6 Low Warming (+1.5°C)"
+                  stroke="#14b8a6"
+                  strokeWidth={2.5}
+                  strokeDasharray={ipccScenario === 'all' ? '3 3' : '4 4'}
+                  fillOpacity={ipccScenario === 'all' ? 0.05 : 0.6}
+                  fill="url(#colorSsp126)"
+                />
+              )}
+
+              {(ipccScenario === 'ssp245' || ipccScenario === 'all') && (
                 <Area
                   type="monotone"
                   dataKey="ssp245"
                   name="IPCC SSP2-4.5 Moderate Warming (+1.8°C)"
                   stroke="#06b6d4"
                   strokeWidth={2.5}
-                  strokeDasharray="4 4"
-                  fillOpacity={1}
+                  strokeDasharray={ipccScenario === 'all' ? '4 4' : '4 4'}
+                  fillOpacity={ipccScenario === 'all' ? 0.05 : 0.6}
                   fill="url(#colorSsp245)"
                 />
-              ) : (
+              )}
+
+              {(ipccScenario === 'ssp370' || ipccScenario === 'all') && (
+                <Area
+                  type="monotone"
+                  dataKey="ssp370"
+                  name="IPCC SSP3-7.0 High Stress (+2.7°C - 'SSP 3.7')"
+                  stroke="#f59e0b"
+                  strokeWidth={2.5}
+                  strokeDasharray="5 5"
+                  fillOpacity={ipccScenario === 'all' ? 0.05 : 0.6}
+                  fill="url(#colorSsp370)"
+                />
+              )}
+
+              {(ipccScenario === 'ssp585' || ipccScenario === 'all') && (
                 <Area
                   type="monotone"
                   dataKey="ssp585"
                   name="IPCC SSP5-8.5 Extreme Warming (+3.0°C)"
                   stroke="#f43f5e"
                   strokeWidth={2.5}
-                  strokeDasharray="5 5"
-                  fillOpacity={1}
+                  strokeDasharray="6 6"
+                  fillOpacity={ipccScenario === 'all' ? 0.05 : 0.6}
                   fill="url(#colorSsp585)"
                 />
               )}
@@ -160,27 +231,34 @@ export function Forecast2050Chart() {
           </ResponsiveContainer>
         </div>
 
-        {/* 2050 Key Metrics Highlights */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-3 border-t border-slate-800 font-mono text-xs">
-          <div className="bg-slate-900/90 p-4 rounded-xl border border-slate-800 space-y-1">
-            <span className="text-slate-400 text-[10px] uppercase">2050 Baseline Canopy</span>
-            <div className="text-xl font-extrabold text-cyan-400">30,800.00 ha</div>
-            <span className="text-emerald-400 text-[10px]">+7.92% Growth vs 2023</span>
+        {/* 2050 Comparative Horizon Metric Cards */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 pt-3 border-t border-slate-800 font-mono text-xs">
+          <div className="bg-slate-900/90 p-3.5 rounded-xl border border-teal-500/30 space-y-1">
+            <span className="text-teal-400 text-[10px] uppercase font-bold">SSP1-2.6 (Paris Goal)</span>
+            <div className="text-lg sm:text-xl font-extrabold text-teal-300">33,100 ha</div>
+            <span className="text-emerald-400 text-[10px] block">+15.98% High Recovery</span>
           </div>
 
-          <div className="bg-slate-900/90 p-4 rounded-xl border border-slate-800 space-y-1">
-            <span className="text-slate-400 text-[10px] uppercase">2050 Active Restoration Target</span>
-            <div className="text-xl font-extrabold text-emerald-400">32,800.00 ha</div>
-            <span className="text-emerald-400 text-[10px]">+14.93% Full Resilience Gain</span>
+          <div className="bg-slate-900/90 p-3.5 rounded-xl border border-cyan-500/30 space-y-1">
+            <span className="text-cyan-400 text-[10px] uppercase font-bold">SSP2-4.5 (Moderate)</span>
+            <div className="text-lg sm:text-xl font-extrabold text-cyan-300">30,100 ha</div>
+            <span className="text-cyan-400 text-[10px] block">+5.47% Steady Growth</span>
           </div>
 
-          <div className="bg-slate-900/90 p-4 rounded-xl border border-slate-800 space-y-1">
-            <span className="text-slate-400 text-[10px] uppercase">2050 Extreme Stress (SSP5-8.5)</span>
-            <div className="text-xl font-extrabold text-rose-400">21,800.00 ha</div>
-            <span className="text-rose-400 text-[10px]">-23.61% Severe Canopy Loss</span>
+          <div className="bg-slate-900/90 p-3.5 rounded-xl border border-amber-500/30 space-y-1">
+            <span className="text-amber-400 text-[10px] uppercase font-bold">SSP3-7.0 ('SSP 3.7')</span>
+            <div className="text-lg sm:text-xl font-extrabold text-amber-300">23,400 ha</div>
+            <span className="text-rose-400 text-[10px] block">-18.01% High Degradation</span>
+          </div>
+
+          <div className="bg-slate-900/90 p-3.5 rounded-xl border border-rose-500/30 space-y-1">
+            <span className="text-rose-400 text-[10px] uppercase font-bold">SSP5-8.5 (Extreme)</span>
+            <div className="text-lg sm:text-xl font-extrabold text-rose-300">21,800 ha</div>
+            <span className="text-rose-400 text-[10px] block">-23.61% Severe Canopy Loss</span>
           </div>
         </div>
       </div>
     </div>
   );
 }
+

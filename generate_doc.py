@@ -158,7 +158,7 @@ for b in r2_bullets:
 add_custom_heading("Review 3 (Phase 3 / DA-3): 2050 Climate Forecasting & Carbon Monetization", level=2)
 r3_bullets = [
     "Expanded 12 Sanctuary Footprint: Pichavaram, Muthupet, Point Calimere, Punnakayal, Kazhuveli, Pulicat, Ramanathapuram, Devipattinam, Kanyakumari (NEW), Manamelkudi (NEW), Ennore (NEW), and Adyar (NEW).",
-    "2025–2050 Long-Term IPCC AR6 Climate Forecasting Engine: SSP2-4.5 (Moderate Action, +7.92% to 30,800 ha) vs. SSP5-8.5 (Extreme Stress, -23.61% loss to 21,800 ha by 2050). Active Target reaches 32,800 ha (+14.93%).",
+    "2025–2050 Long-Term IPCC AR6 Multi-Scenario Forecasting Suite: Compares SSP1-2.6 (Paris Goal, +15.98% to 33,100 ha), SSP2-4.5 (Moderate Action, +5.47% to 30,100 ha), SSP3-7.0 / 'SSP 3.7' (High Stress, -18.01% to 23,400 ha), and SSP5-8.5 (Extreme Warming Stress, -23.61% to 21,800 ha) up to Year 2050, alongside TN-SHORE Active Restoration targets (32,800 ha).",
     "Blue Carbon Credit Estimator ($ USD): Aligned with Article 6 of the Paris Agreement. Calculates Total Soil Carbon Stock (~4.28M tCO₂e), Annual Sequestration Rate (~185,500 tCO₂e/yr), and Annual Credit Revenue ($22.26M USD/yr at $120/ton).",
     "Copernicus Sentinel-2 10m NDVI Satellite Telemetry: Real-time vegetation index (NDVI = (NIR - RED)/(NIR + RED)) and 4-tier zonal unmixing (Dense Canopy, Moderate Fringes, Stressed Saplings, Water Channels)."
 ]
